@@ -1,6 +1,6 @@
 package com.example.learnenglishtelegrambot.controller;
 
-import com.example.learnenglishtelegrambot.model.User;
+import com.example.learnenglishtelegrambot.model.CustomUser;
 import com.example.learnenglishtelegrambot.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("${app.http.bot")
+@RequestMapping("${app.http.bot}")
 @RequiredArgsConstructor
 @SuppressWarnings("unused")
 public class UsersController {
@@ -23,8 +23,8 @@ public class UsersController {
      * Возвращает список пользователей и связанных с ними планами
      */
     @RequestMapping(path = "/users_idea", method = RequestMethod.GET)
-    public List<User> getIdeaList() {
+    public List<CustomUser> getIdeaList() {
         log.debug("Method - getIdeaList was called");
-        return userService.getUserList();
+        return userService.getAll();
     }
 }
