@@ -1,4 +1,5 @@
 package com.example.learnenglishtelegrambot.telegram;
+import com.example.learnenglishtelegrambot.google.translateapi.Client;
 import com.example.learnenglishtelegrambot.model.CustomUser;
 import com.example.learnenglishtelegrambot.model.Word;
 import com.example.learnenglishtelegrambot.repository.UserRepository;
@@ -18,6 +19,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.util.List;
+
 @Slf4j
 @Getter
 @Component
@@ -30,20 +33,22 @@ public class TelegramBot extends TelegramLongPollingBot {
     private final String botUsername;
     private final String botToken;
     private final TelegramBotsApi telegramBotsApi;
+    private final Client client;
 
 
 
 
 
 
-    public TelegramBot(UserService userService, WordService wordService, UserRepository userRepository,    @Value("${telegram-bot.name}")
-            String botUsername, @Value("${telegram-bot.token}") String botToken, TelegramBotsApi telegramBotsApi) throws TelegramApiException {
+    public TelegramBot(UserService userService, WordService wordService, UserRepository userRepository, @Value("${telegram-bot.name}")
+            String botUsername, @Value("${telegram-bot.token}") String botToken, TelegramBotsApi telegramBotsApi, Client client) throws TelegramApiException {
         this.userService = userService;
         this.wordService = wordService;
         this.userRepository = userRepository;
         this.botUsername = botUsername;
         this.botToken = botToken;
         this.telegramBotsApi = telegramBotsApi;
+        this.client = client;
         telegramBotsApi.registerBot(this);
     }
 
@@ -60,15 +65,17 @@ public class TelegramBot extends TelegramLongPollingBot {
         var msg = update.getMessage();
         var user = msg.getFrom();
         String msgValue = msg.getText();
+        Long usersId = user.getId();
 
-        if (msgValue.equals("/1")){
-            System.out.println(1);
-            Word word = test(user);
-            sendText(user.getId(),word.getValue());
+        if (msgValue.equals("/20")){
+            String  word = getWords(user);
+            sendText(usersId,word);
 
         }
         else {
-            saveMessage(user,msg);
+            Word word = saveMessage(user,msg);
+            String wordWithTranslate = word.getValue() + ": " + word.getTranslation();
+            sendText(usersId,wordWithTranslate);
         }
 
 
@@ -76,27 +83,51 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     }
 
-    private void saveMessage(User user, Message msg) {
+    private Word saveMessage(User user, Message msg) {
         CustomUser customUser = userService.getUser(user);
         Word word = Word.builder()
                 .user(customUser)
                 .value(msg.getText())
                 .build();
-        wordService.saveWord(word);
+        return wordService.saveWord(word);
 
 
     }
 
 
-    private Word test(User user){
+
+
+
+    private String  getWords(User user){
         CustomUser customUser = userService.getUser(user);
-        return wordService.getAllWordsByUser(customUser).get(0);
+        List<Word> words = wordService.getAllWordsByUser(customUser);
+        StringBuilder sb = new StringBuilder();
+        WordCounter wordCounter = new WordCounter();
+
+        words.forEach(word
+                -> {
+                    int x = (20 - (word.getValue().length()));
+                    sb.append("<b>")
+                            .append(wordCounter.getCurrentCount()).append(")").append("</b>")
+                            .append(word.getValue())
+                            .append(" : ")
+                            .append(word.getTranslation())
+                            .append("\n");
+
+
+                }
+
+
+                );
+
+        return sb.toString();
     }
 
 
 
     private void sendText(Long who,String what){
         SendMessage sm = SendMessage.builder()
+                .parseMode("HTML")
                 .chatId(who.toString())   //who are we sending a message to
                 .text(what).build();      //message
 
@@ -124,8 +155,13 @@ public class TelegramBot extends TelegramLongPollingBot {
     }
 
 
-    private void defaultMsg(SendMessage response, String msg) throws TelegramApiException {
-        response.setText(msg);
-        execute(response);
+
+
+
+    private class WordCounter{
+        private int count;
+        private int getCurrentCount(){
+            return ++count;
+        }
     }
 }

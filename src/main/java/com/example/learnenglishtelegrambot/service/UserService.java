@@ -26,12 +26,15 @@ public class UserService {
     @Transactional
     public CustomUser getUser(User user) {
         Long id = user.getId();
-        CustomUser customUser =  userRepository.findById(id).isPresent() ?
+        return userRepository.findById(id).isPresent() ?
                 userRepository.findById(id).get() :
-                CustomUser.builder()
-                        .id(id)
-                        .build();
-        System.out.println(customUser);
-        return userRepository.save(customUser);
+               saveUser(id);
+    }
+
+    public CustomUser saveUser(Long id){;
+        return userRepository.save(CustomUser.builder()
+                .id(id)
+                .build());
+
     }
 }

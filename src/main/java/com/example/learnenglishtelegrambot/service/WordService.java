@@ -1,7 +1,7 @@
 package com.example.learnenglishtelegrambot.service;
 
 
-import com.example.learnenglishtelegrambot.exceptions.NotFoundException;
+import com.example.learnenglishtelegrambot.google.translateapi.Client;
 import com.example.learnenglishtelegrambot.model.CustomUser;
 import com.example.learnenglishtelegrambot.model.Word;
 import com.example.learnenglishtelegrambot.repository.UserRepository;
@@ -18,6 +18,7 @@ import java.util.Optional;
 public class WordService {
     private final WordRepository wordRepository;
     private final UserRepository userRepository;
+    private final Client client;
 
 
     public List<Word> getAllWordsByUser(CustomUser user){
@@ -41,7 +42,8 @@ public class WordService {
     }
 
     private String getTranslation(String value) {
-        return "test";
+
+        return client.translate(value);
     }
 
 }
