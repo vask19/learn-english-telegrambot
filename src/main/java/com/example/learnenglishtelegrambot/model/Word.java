@@ -21,19 +21,34 @@ public class Word {
     private Long id;
 
     @ManyToOne(cascade = CascadeType.MERGE)
+
     private CustomUser user;
 
     private String value;
 
     private String translation;
 
+    private short difficult;
     private short priority;
     @Builder.Default
     private boolean newWord = true;
 
 
+    public void moreDifficult(){
+
+        if (priority <5){
+            priority++;
+
+        }
+    }
+
+
     public void incrementPriority(){
-        priority = priority<10 ? priority++ : priority;
+
+        if (priority <3){
+            priority++;
+
+        }
     }
 
 }
