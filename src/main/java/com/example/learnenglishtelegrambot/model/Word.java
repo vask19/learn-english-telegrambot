@@ -36,8 +36,8 @@ public class Word {
 
     public void moreDifficult(){
 
-        if (priority <5){
-            priority++;
+        if (difficult<5){
+            difficult++;
 
         }
     }

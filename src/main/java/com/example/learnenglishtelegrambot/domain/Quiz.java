@@ -18,16 +18,20 @@ import java.util.*;
 public class Quiz {
     private Long id;
     private Set<Word> quizWords;
+    private Queue<Word> queue = new LinkedList<>();
     private static final int QUIZ_SIZE = 5;
     private static final QuizMode QUIZ_MODE = QuizMode.NORMAL;
-    private final WordService wordService;
+    private  WordService wordService;
+    private User user;
+
+    public Quiz(WordService wordService, User user) {
+        this.wordService = wordService;
+        this.user = user;
+    }
 
 
-
-
-
-//TODO : abstract fabric
-    public void initQuiz(User user){
+    //TODO : abstract fabric
+    public void initQuiz(){
         Random random = new Random();
         quizWords = new HashSet<>();
         List<Word> words = new ArrayList<>();
@@ -43,17 +47,25 @@ public class Quiz {
 
         }
 
+        queue.addAll(quizWords);
+
 
 
     }
 
     public Word next(){
-        return null;
+
+        return queue.peek();
+    }
+
+
+    public void stop() {
     }
 
 
 
 
-
-
+    public Word poll() {
+        return queue.poll();
+    }
 }

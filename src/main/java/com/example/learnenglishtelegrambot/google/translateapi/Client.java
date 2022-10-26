@@ -13,7 +13,7 @@ public class Client {
 
 
         Translate translate = TranslateOptions.newBuilder()
-                .setApiKey("").build().getService();
+                .setApiKey("AIzaSyCos7Dkgl9jWEmBU3os1upO5nU1solLT60").build().getService();
         Translation translation = translate.translate(
                 str,
                 Translate.TranslateOption.sourceLanguage("en"),
