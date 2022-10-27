@@ -1,16 +1,13 @@
 package com.example.learnenglishtelegrambot.service;
-
-
 import com.example.learnenglishtelegrambot.google.translateapi.Client;
 import com.example.learnenglishtelegrambot.model.CustomUser;
 import com.example.learnenglishtelegrambot.model.Word;
 import com.example.learnenglishtelegrambot.repository.UserRepository;
 import com.example.learnenglishtelegrambot.repository.WordRepository;
-import com.example.learnenglishtelegrambot.telegram.TelegramBot;
+import com.example.learnenglishtelegrambot.utils.AnswerDecorator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.User;
-
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +19,7 @@ public class WordService {
     private final UserRepository userRepository;
     private final Client client;
     private final UserService userService;
-
+    private final AnswerDecorator answerDecorator;
 
     public List<Word> getAllWordsByUser(User user){
         CustomUser customUser = userService.getUser(user);
@@ -80,16 +77,12 @@ public class WordService {
         WordCounter wordCounter = new WordCounter();
         words.forEach(word
                         -> {
-
-
-                    sb.append("<b>")
-                            .append(wordCounter.getCurrentCount()).append(")").append("</b>")
+                    sb
+                            .append(answerDecorator.decor(wordCounter.getCurrentCount()))
                             .append(word.getValue())
                             .append(" : ")
                             .append(word.getTranslation())
                             .append("\n");
-
-
                 }
         );
 

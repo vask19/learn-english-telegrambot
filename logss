@@ -1,33 +1,33 @@
-2022-10-26 13:50:33.916  INFO 1262 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1262 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 13:50:33.918  INFO 1262 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 13:50:34.183  INFO 1262 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 13:50:34.206  INFO 1262 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
-2022-10-26 13:50:34.405  INFO 1262 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 13:50:34.408  INFO 1262 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 13:50:34.408  INFO 1262 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 13:50:34.465  INFO 1262 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 13:50:34.465  INFO 1262 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 528 ms
-2022-10-26 13:50:34.535  INFO 1262 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 13:50:34.555  INFO 1262 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 13:50:34.602  INFO 1262 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 13:50:34.633  INFO 1262 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 13:50:34.702  INFO 1262 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 13:50:34.711  INFO 1262 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 13:50:34.946  INFO 1262 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 13:50:34.950  INFO 1262 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 13:50:35.185  WARN 1262 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBot' defined in file [/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main/com/example/learnenglishtelegrambot/telegram/TelegramBot.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.learnenglishtelegrambot.telegram.TelegramBot]: Constructor threw exception; nested exception is org.telegram.telegrambots.meta.exceptions.TelegramApiException: Bot token and username can't be empty
-2022-10-26 13:50:35.185  INFO 1262 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 13:50:35.186  INFO 1262 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 13:50:35.187  INFO 1262 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 13:50:35.188  INFO 1262 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-10-26 13:50:35.193  INFO 1262 --- [main] ConditionEvaluationReportLoggingListener : 
+2022-10-27 17:34:17.388  INFO 1254 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1254 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-10-27 17:34:17.390  INFO 1254 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-10-27 17:34:17.624  INFO 1254 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-27 17:34:17.645  INFO 1254 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2022-10-27 17:34:17.840  INFO 1254 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-27 17:34:17.844  INFO 1254 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-27 17:34:17.844  INFO 1254 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-27 17:34:17.901  INFO 1254 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-27 17:34:17.901  INFO 1254 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 492 ms
+2022-10-27 17:34:17.966  INFO 1254 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-27 17:34:18.003  INFO 1254 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-10-27 17:34:18.053  INFO 1254 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-27 17:34:18.082  INFO 1254 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-27 17:34:18.172  INFO 1254 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-27 17:34:18.180  INFO 1254 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-27 17:34:18.459  INFO 1254 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-27 17:34:18.463  INFO 1254 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-27 17:34:18.564  WARN 1254 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quizService' defined in file [/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main/com/example/learnenglishtelegrambot/service/QuizService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quizRepository' defined in com.example.learnenglishtelegrambot.repository.QuizRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.learnenglishtelegrambot.domain.Quiz
+2022-10-27 17:34:18.565  INFO 1254 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-27 17:34:18.566  INFO 1254 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-27 17:34:18.568  INFO 1254 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-27 17:34:18.569  INFO 1254 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-27 17:34:18.576  INFO 1254 --- [main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-10-26 13:50:35.203 ERROR 1262 --- [main] o.s.boot.SpringApplication               : Application run failed
+2022-10-27 17:34:18.588 ERROR 1254 --- [main] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'telegramBot' defined in file [/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main/com/example/learnenglishtelegrambot/telegram/TelegramBot.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.learnenglishtelegrambot.telegram.TelegramBot]: Constructor threw exception; nested exception is org.telegram.telegrambots.meta.exceptions.TelegramApiException: Bot token and username can't be empty
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:296) ~[spring-beans-5.3.23.jar:5.3.23]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quizService' defined in file [/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main/com/example/learnenglishtelegrambot/service/QuizService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quizRepository' defined in com.example.learnenglishtelegrambot.repository.QuizRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.learnenglishtelegrambot.domain.Quiz
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.23.jar:5.3.23]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.23.jar:5.3.23]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.23.jar:5.3.23]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
@@ -46,529 +46,217 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
 	at com.example.learnenglishtelegrambot.LearnEnglishTelegrambotApplication.main(LearnEnglishTelegrambotApplication.java:10) ~[main/:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.learnenglishtelegrambot.telegram.TelegramBot]: Constructor threw exception; nested exception is org.telegram.telegrambots.meta.exceptions.TelegramApiException: Bot token and username can't be empty
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:311) ~[spring-beans-5.3.23.jar:5.3.23]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quizRepository' defined in com.example.learnenglishtelegrambot.repository.QuizRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.learnenglishtelegrambot.domain.Quiz
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.23.jar:5.3.23]
 	... 19 common frames omitted
-Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiException: Bot token and username can't be empty
-	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:62) ~[telegrambots-meta-5.3.0.jar:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.<init>(TelegramBot.java:52) ~[main/:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.example.learnenglishtelegrambot.domain.Quiz
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:583) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:233) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:182) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:165) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:76) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:322) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.util.Lazy.get(Lazy.java:114) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:328) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 30 common frames omitted
 
-2022-10-26 13:51:53.290  INFO 1289 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1289 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 13:51:53.292  INFO 1289 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 13:51:53.533  INFO 1289 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 13:51:53.554  INFO 1289 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
-2022-10-26 13:51:53.731  INFO 1289 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 13:51:53.735  INFO 1289 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 13:51:53.735  INFO 1289 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 13:51:53.789  INFO 1289 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 13:51:53.790  INFO 1289 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 483 ms
-2022-10-26 13:51:53.855  INFO 1289 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 13:51:53.873  INFO 1289 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 13:51:53.921  INFO 1289 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 13:51:53.953  INFO 1289 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 13:51:54.024  INFO 1289 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 13:51:54.033  INFO 1289 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 13:51:54.282  INFO 1289 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 13:51:54.285  INFO 1289 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 13:51:54.968  WARN 1289 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-26 13:51:54.995 DEBUG 1289 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2022-10-26 13:51:55.019 DEBUG 1289 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
-2022-10-26 13:51:55.029 DEBUG 1289 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2022-10-26 13:51:55.033 DEBUG 1289 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2022-10-26 13:51:55.096  INFO 1289 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-10-26 13:51:55.100  INFO 1289 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.948 seconds (JVM running for 2.17)
-2022-10-26 13:52:32.875  WARN 1289 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 13:53:48.562 ERROR 1289 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getFrom()" because "msg" is null
-
-java.lang.NullPointerException: Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getFrom()" because "msg" is null
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:67) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-
-2022-10-26 13:53:48.625 ERROR 1289 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "String.contains(java.lang.CharSequence)" because "msgValue" is null
-
-java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "msgValue" is null
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:73) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-
-2022-10-26 13:53:55.049 ERROR 1289 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-
-java.lang.RuntimeException: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:135) ~[main/:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:99) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty
-	at org.telegram.telegrambots.meta.api.methods.send.SendMessage.validate(SendMessage.java:142) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendMethodRequest(DefaultAbsSender.java:1037) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1011) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-5.3.0.jar:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:133) ~[main/:na]
-	... 4 common frames omitted
-
-2022-10-26 13:54:26.657 ERROR 1289 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getFrom()" because "msg" is null
-
-java.lang.NullPointerException: Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getFrom()" because "msg" is null
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:67) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-
-2022-10-26 13:54:26.741 ERROR 1289 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "String.contains(java.lang.CharSequence)" because "msgValue" is null
-
-java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "msgValue" is null
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:73) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-
-2022-10-26 13:54:26.825 ERROR 1289 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "String.contains(java.lang.CharSequence)" because "msgValue" is null
-
-java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "msgValue" is null
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:73) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-
-2022-10-26 13:54:27.077 ERROR 1289 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getFrom()" because "msg" is null
-
-java.lang.NullPointerException: Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getFrom()" because "msg" is null
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:67) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-
-2022-10-26 13:54:43.697  INFO 1289 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 13:54:43.698  INFO 1289 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 13:54:43.699  INFO 1289 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 13:54:45.083  INFO 1314 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1314 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 13:54:45.085  INFO 1314 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 13:54:45.375  INFO 1314 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 13:54:45.400  INFO 1314 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
-2022-10-26 13:54:45.587  INFO 1314 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 13:54:45.591  INFO 1314 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 13:54:45.591  INFO 1314 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 13:54:45.646  INFO 1314 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 13:54:45.646  INFO 1314 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 540 ms
-2022-10-26 13:54:45.707  INFO 1314 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 13:54:45.733  INFO 1314 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 13:54:45.780  INFO 1314 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 13:54:45.809  INFO 1314 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 13:54:45.879  INFO 1314 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 13:54:45.888  INFO 1314 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 13:54:46.117  INFO 1314 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 13:54:46.121  INFO 1314 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 13:54:46.997  WARN 1314 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-26 13:54:47.030 DEBUG 1314 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2022-10-26 13:54:47.052 DEBUG 1314 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
-2022-10-26 13:54:47.061 DEBUG 1314 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2022-10-26 13:54:47.065 DEBUG 1314 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2022-10-26 13:54:47.125  INFO 1314 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-10-26 13:54:47.130  INFO 1314 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.19 seconds (JVM running for 2.421)
-2022-10-26 13:54:49.816 ERROR 1314 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-
-java.lang.RuntimeException: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:135) ~[main/:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:99) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty
-	at org.telegram.telegrambots.meta.api.methods.send.SendMessage.validate(SendMessage.java:142) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendMethodRequest(DefaultAbsSender.java:1037) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1011) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-5.3.0.jar:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:133) ~[main/:na]
-	... 4 common frames omitted
-
-2022-10-26 13:55:21.055  WARN 1314 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 13:57:37.190  INFO 1314 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 13:57:37.191  INFO 1314 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 13:57:37.192  INFO 1314 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 13:57:39.109  INFO 1339 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1339 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 13:57:39.110  INFO 1339 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 13:57:39.375  INFO 1339 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 13:57:39.395  INFO 1339 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
-2022-10-26 13:57:39.582  INFO 1339 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 13:57:39.587  INFO 1339 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 13:57:39.587  INFO 1339 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 13:57:39.645  INFO 1339 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 13:57:39.646  INFO 1339 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 514 ms
-2022-10-26 13:57:39.712  INFO 1339 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 13:57:39.728  INFO 1339 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 13:57:39.773  INFO 1339 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 13:57:39.803  INFO 1339 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 13:57:39.868  INFO 1339 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 13:57:39.876  INFO 1339 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 13:57:40.098  INFO 1339 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 13:57:40.101  INFO 1339 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 13:57:40.728  WARN 1339 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-26 13:57:40.755 DEBUG 1339 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2022-10-26 13:57:40.782 DEBUG 1339 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
-2022-10-26 13:57:40.792 DEBUG 1339 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2022-10-26 13:57:40.797 DEBUG 1339 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2022-10-26 13:57:40.856  INFO 1339 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-10-26 13:57:40.861  INFO 1339 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.915 seconds (JVM running for 2.283)
-2022-10-26 13:58:19.964  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 13:58:44.634  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:03:35.002  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:03:47.751  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:06:01.783  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:06:16.673  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:07:22.121  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:08:33.918  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:14:43.713  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:15:24.366  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:39:01.171  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:51:00.106  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:51:34.507  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:53:32.351  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:53:45.725  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:56:36.254  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:57:38.549  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 14:58:22.744  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 15:22:21.714  WARN 1339 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
-2022-10-26 15:26:48.403  INFO 1339 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:26:48.405  INFO 1339 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 15:26:48.406  INFO 1339 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 15:26:50.462  INFO 1644 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1644 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 15:26:50.462  INFO 1644 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 15:26:50.706  INFO 1644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 15:26:50.727  INFO 1644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
-2022-10-26 15:26:50.924  INFO 1644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 15:26:50.927  INFO 1644 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 15:26:50.928  INFO 1644 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 15:26:50.987  INFO 1644 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 15:26:50.987  INFO 1644 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 509 ms
-2022-10-26 15:26:51.054  INFO 1644 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 15:26:51.077  INFO 1644 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 15:26:51.134  INFO 1644 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 15:26:51.169  INFO 1644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 15:26:51.246  INFO 1644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 15:26:51.254  INFO 1644 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 15:26:51.483  INFO 1644 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 15:26:51.487  INFO 1644 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:26:51.644  WARN 1644 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quiz' defined in file [/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main/com/example/learnenglishtelegrambot/domain/Quiz.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.telegram.telegrambots.meta.api.objects.User' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2022-10-26 15:26:51.645  INFO 1644 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:26:51.645  INFO 1644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 15:26:51.647  INFO 1644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 15:26:51.648  INFO 1644 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-10-26 15:26:51.655  INFO 1644 --- [main] ConditionEvaluationReportLoggingListener : 
+2022-10-27 17:35:25.090  INFO 1271 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1271 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-10-27 17:35:25.091  INFO 1271 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-10-27 17:35:25.328  INFO 1271 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-27 17:35:25.348  INFO 1271 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2022-10-27 17:35:25.535  INFO 1271 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-27 17:35:25.539  INFO 1271 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-27 17:35:25.539  INFO 1271 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-27 17:35:25.598  INFO 1271 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-27 17:35:25.598  INFO 1271 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 492 ms
+2022-10-27 17:35:25.659  INFO 1271 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-27 17:35:25.681  INFO 1271 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-10-27 17:35:25.729  INFO 1271 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-27 17:35:25.761  INFO 1271 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-27 17:35:25.831  INFO 1271 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-27 17:35:25.839  INFO 1271 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-27 17:35:26.072  INFO 1271 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-27 17:35:26.076  INFO 1271 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-27 17:35:28.802  WARN 1271 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-27 17:35:28.827 DEBUG 1271 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-10-27 17:35:28.850 DEBUG 1271 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-10-27 17:35:28.858 DEBUG 1271 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-10-27 17:35:28.863 DEBUG 1271 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-10-27 17:35:28.890  WARN 1271 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quizRepository' defined in com.example.learnenglishtelegrambot.repository.QuizRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.learnenglishtelegrambot.domain.Quiz
+2022-10-27 17:35:28.891  INFO 1271 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-27 17:35:28.892  INFO 1271 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-27 17:35:28.893  INFO 1271 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-27 17:35:28.894  INFO 1271 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-27 17:35:28.899  INFO 1271 --- [main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-10-26 15:26:51.664 ERROR 1644 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2022-10-27 17:35:28.908 ERROR 1271 --- [main] o.s.boot.SpringApplication               : Application run failed
 
-***************************
-APPLICATION FAILED TO START
-***************************
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quizRepository' defined in com.example.learnenglishtelegrambot.repository.QuizRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.example.learnenglishtelegrambot.domain.Quiz
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:936) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.example.learnenglishtelegrambot.LearnEnglishTelegrambotApplication.main(LearnEnglishTelegrambotApplication.java:10) ~[main/:na]
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.example.learnenglishtelegrambot.domain.Quiz
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:583) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:233) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:182) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:165) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:76) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:322) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.util.Lazy.get(Lazy.java:114) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:328) ~[spring-data-commons-2.6.0.jar:2.6.0]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 16 common frames omitted
 
-Description:
+2022-10-27 17:35:29.062 ERROR 1271 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Error creating bean with name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': Could not bind properties to 'DataSourceProperties' : prefix=spring.datasource, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is java.lang.IllegalStateException: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8dbfffb has not been refreshed yet
 
-Parameter 1 of constructor in com.example.learnenglishtelegrambot.domain.Quiz required a bean of type 'org.telegram.telegrambots.meta.api.objects.User' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.telegram.telegrambots.meta.api.objects.User' in your configuration.
-
-2022-10-26 15:27:05.007  INFO 1651 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1651 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 15:27:05.008  INFO 1651 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 15:27:05.215  INFO 1651 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 15:27:05.234  INFO 1651 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
-2022-10-26 15:27:05.403  INFO 1651 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 15:27:05.406  INFO 1651 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 15:27:05.406  INFO 1651 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 15:27:05.460  INFO 1651 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 15:27:05.461  INFO 1651 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 436 ms
-2022-10-26 15:27:05.529  INFO 1651 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 15:27:05.547  INFO 1651 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 15:27:05.598  INFO 1651 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 15:27:05.624  INFO 1651 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 15:27:05.691  INFO 1651 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 15:27:05.700  INFO 1651 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 15:27:05.930  INFO 1651 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 15:27:05.933  INFO 1651 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:27:06.092  WARN 1651 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quiz' defined in file [/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main/com/example/learnenglishtelegrambot/domain/Quiz.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.telegram.telegrambots.meta.api.objects.User' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2022-10-26 15:27:06.093  INFO 1651 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:27:06.093  INFO 1651 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 15:27:06.095  INFO 1651 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 15:27:06.096  INFO 1651 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-10-26 15:27:06.103  INFO 1651 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-10-26 15:27:06.111 ERROR 1651 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 1 of constructor in com.example.learnenglishtelegrambot.domain.Quiz required a bean of type 'org.telegram.telegrambots.meta.api.objects.User' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.telegram.telegrambots.meta.api.objects.User' in your configuration.
-
-2022-10-26 15:28:44.753  INFO 1655 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1655 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 15:28:44.754  INFO 1655 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 15:28:44.975  INFO 1655 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 15:28:44.994  INFO 1655 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
-2022-10-26 15:28:45.166  INFO 1655 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 15:28:45.170  INFO 1655 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 15:28:45.170  INFO 1655 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 15:28:45.222  INFO 1655 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 15:28:45.223  INFO 1655 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 454 ms
-2022-10-26 15:28:45.283  INFO 1655 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 15:28:45.302  INFO 1655 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 15:28:45.344  INFO 1655 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 15:28:45.371  INFO 1655 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 15:28:45.431  INFO 1655 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 15:28:45.437  INFO 1655 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 15:28:45.641  INFO 1655 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 15:28:45.644  INFO 1655 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:28:45.792  WARN 1655 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quiz' defined in file [/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main/com/example/learnenglishtelegrambot/domain/Quiz.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.telegram.telegrambots.meta.api.objects.User' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2022-10-26 15:28:45.792  INFO 1655 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:28:45.793  INFO 1655 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 15:28:45.795  INFO 1655 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 15:28:45.795  INFO 1655 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-10-26 15:28:45.801  INFO 1655 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-10-26 15:28:45.808 ERROR 1655 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 1 of constructor in com.example.learnenglishtelegrambot.domain.Quiz required a bean of type 'org.telegram.telegrambots.meta.api.objects.User' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.telegram.telegrambots.meta.api.objects.User' in your configuration.
-
-2022-10-26 15:31:51.251  INFO 1683 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1683 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 15:31:51.252  INFO 1683 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 15:31:51.542  INFO 1683 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 15:31:51.563  INFO 1683 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
-2022-10-26 15:31:51.759  INFO 1683 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 15:31:51.764  INFO 1683 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 15:31:51.764  INFO 1683 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 15:31:51.826  INFO 1683 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 15:31:51.826  INFO 1683 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 558 ms
-2022-10-26 15:31:51.920  INFO 1683 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 15:31:51.937  INFO 1683 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 15:31:51.992  INFO 1683 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 15:31:52.022  INFO 1683 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 15:31:52.089  INFO 1683 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 15:31:52.097  INFO 1683 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 15:31:52.317  INFO 1683 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 15:31:52.321  INFO 1683 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:31:53.065  WARN 1683 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-26 15:31:53.095 DEBUG 1683 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2022-10-26 15:31:53.121 DEBUG 1683 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
-2022-10-26 15:31:53.130 DEBUG 1683 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2022-10-26 15:31:53.134 DEBUG 1683 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2022-10-26 15:31:53.193  INFO 1683 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-10-26 15:31:53.198  INFO 1683 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.081 seconds (JVM running for 2.467)
-2022-10-26 15:32:00.401 ERROR 1683 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-
-java.lang.RuntimeException: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:155) ~[main/:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:101) ~[main/:na]
+org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': Could not bind properties to 'DataSourceProperties' : prefix=spring.datasource, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is java.lang.IllegalStateException: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8dbfffb has not been refreshed yet
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:92) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:78) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolvePreparedArguments(ConstructorResolver.java:834) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:449) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolvePreparedArguments(ConstructorResolver.java:834) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:153) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1211) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:233) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1284) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:494) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:349) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:342) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.determineTransactionManager(TransactionAspectSupport.java:503) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:342) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.learnenglishtelegrambot.service.UserService$$EnhancerBySpringCGLIB$$ae44a9c9.getUser(<generated>) ~[main/:na]
+	at com.example.learnenglishtelegrambot.service.WordService.getAllWordsByUser(WordService.java:25) ~[main/:na]
+	at com.example.learnenglishtelegrambot.service.WordService$$FastClassBySpringCGLIB$$b87ae20d.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.learnenglishtelegrambot.service.WordService$$EnhancerBySpringCGLIB$$c2578e0c.getAllWordsByUser(<generated>) ~[main/:na]
+	at com.example.learnenglishtelegrambot.domain.Quiz.initQuiz(Quiz.java:41) ~[main/:na]
+	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:95) ~[main/:na]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
 	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
 	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty
-	at org.telegram.telegrambots.meta.api.methods.send.SendMessage.validate(SendMessage.java:142) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendMethodRequest(DefaultAbsSender.java:1037) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1011) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-5.3.0.jar:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:153) ~[main/:na]
-	... 4 common frames omitted
+Caused by: java.lang.IllegalStateException: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8dbfffb has not been refreshed yet
+	at org.springframework.context.support.AbstractApplicationContext.assertBeanFactoryActive(AbstractApplicationContext.java:1141) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.context.properties.BoundConfigurationProperties.get(BoundConfigurationProperties.java:78) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.getHandler(ConfigurationPropertiesBinder.java:133) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.getBindHandler(ConfigurationPropertiesBinder.java:114) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.bind(ConfigurationPropertiesBinder.java:94) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:89) ~[spring-boot-2.7.5.jar:2.7.5]
+	... 70 common frames omitted
 
-2022-10-26 15:32:25.778 ERROR 1683 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-
-java.lang.RuntimeException: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:155) ~[main/:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:101) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty
-	at org.telegram.telegrambots.meta.api.methods.send.SendMessage.validate(SendMessage.java:142) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendMethodRequest(DefaultAbsSender.java:1037) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1011) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-5.3.0.jar:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:153) ~[main/:na]
-	... 4 common frames omitted
-
-2022-10-26 15:32:27.240 ERROR 1683 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-
-java.lang.RuntimeException: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:155) ~[main/:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:101) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty
-	at org.telegram.telegrambots.meta.api.methods.send.SendMessage.validate(SendMessage.java:142) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendMethodRequest(DefaultAbsSender.java:1037) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1011) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-5.3.0.jar:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:153) ~[main/:na]
-	... 4 common frames omitted
-
-2022-10-26 15:33:12.771  INFO 1683 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:33:12.772  INFO 1683 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 15:33:12.773  INFO 1683 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 15:33:14.254  INFO 1690 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1690 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 15:33:14.255  INFO 1690 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 15:33:14.472  INFO 1690 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 15:33:14.492  INFO 1690 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
-2022-10-26 15:33:14.663  INFO 1690 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 15:33:14.667  INFO 1690 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 15:33:14.667  INFO 1690 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 15:33:14.719  INFO 1690 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 15:33:14.719  INFO 1690 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 448 ms
-2022-10-26 15:33:14.783  INFO 1690 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 15:33:14.798  INFO 1690 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 15:33:14.846  INFO 1690 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 15:33:14.871  INFO 1690 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 15:33:14.938  INFO 1690 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 15:33:14.946  INFO 1690 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 15:33:15.157  INFO 1690 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 15:33:15.160  INFO 1690 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:33:15.810  WARN 1690 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-26 15:33:15.839 DEBUG 1690 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2022-10-26 15:33:15.863 DEBUG 1690 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
-2022-10-26 15:33:15.877 DEBUG 1690 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2022-10-26 15:33:15.881 DEBUG 1690 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2022-10-26 15:33:15.938  INFO 1690 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-10-26 15:33:15.943  INFO 1690 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.817 seconds (JVM running for 2.025)
-2022-10-26 15:33:21.445 ERROR 1690 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-
-java.lang.RuntimeException: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty in method: SendMessage(chatId=1874981703, text=, parseMode=HTML, disableWebPagePreview=null, disableNotification=null, replyToMessageId=null, replyMarkup=null, entities=null, allowSendingWithoutReply=null)
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:156) ~[main/:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:102) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiValidationException: Text parameter can't be empty
-	at org.telegram.telegrambots.meta.api.methods.send.SendMessage.validate(SendMessage.java:142) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendMethodRequest(DefaultAbsSender.java:1037) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1011) ~[telegrambots-5.3.0.jar:na]
-	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-5.3.0.jar:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.sendText(TelegramBot.java:154) ~[main/:na]
-	... 4 common frames omitted
-
-2022-10-26 15:34:02.623  INFO 1690 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:34:02.625  INFO 1690 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 15:34:02.626  INFO 1690 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 15:34:04.262  INFO 1696 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1696 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 15:34:04.263  INFO 1696 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 15:34:04.492  INFO 1696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 15:34:04.512  INFO 1696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
-2022-10-26 15:34:04.686  INFO 1696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 15:34:04.689  INFO 1696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 15:34:04.689  INFO 1696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 15:34:04.741  INFO 1696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 15:34:04.741  INFO 1696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 462 ms
-2022-10-26 15:34:04.803  INFO 1696 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 15:34:04.822  INFO 1696 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 15:34:04.864  INFO 1696 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 15:34:04.890  INFO 1696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 15:34:04.958  INFO 1696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 15:34:04.965  INFO 1696 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 15:34:05.201  INFO 1696 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 15:34:05.205  INFO 1696 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:34:05.854  WARN 1696 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-26 15:34:05.881 DEBUG 1696 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2022-10-26 15:34:05.902 DEBUG 1696 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
-2022-10-26 15:34:05.912 DEBUG 1696 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2022-10-26 15:34:05.916 DEBUG 1696 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2022-10-26 15:34:05.976  INFO 1696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-10-26 15:34:05.981  INFO 1696 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.846 seconds (JVM running for 2.196)
-2022-10-26 15:45:06.330  INFO 1696 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:45:06.331  INFO 1696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 15:45:06.332  INFO 1696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 15:45:08.205  INFO 1717 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1717 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 15:45:08.206  INFO 1717 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 15:45:08.432  INFO 1717 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 15:45:08.452  INFO 1717 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
-2022-10-26 15:45:08.637  INFO 1717 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 15:45:08.641  INFO 1717 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 15:45:08.641  INFO 1717 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 15:45:08.693  INFO 1717 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 15:45:08.693  INFO 1717 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 472 ms
-2022-10-26 15:45:08.754  INFO 1717 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 15:45:08.769  INFO 1717 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 15:45:08.819  INFO 1717 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 15:45:08.845  INFO 1717 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 15:45:08.909  INFO 1717 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 15:45:08.917  INFO 1717 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 15:45:09.148  INFO 1717 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 15:45:09.152  INFO 1717 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:45:09.785  WARN 1717 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-26 15:45:09.811 DEBUG 1717 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2022-10-26 15:45:09.833 DEBUG 1717 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
-2022-10-26 15:45:09.842 DEBUG 1717 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2022-10-26 15:45:09.846 DEBUG 1717 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2022-10-26 15:45:09.901  INFO 1717 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-10-26 15:45:09.906  INFO 1717 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.832 seconds (JVM running for 2.19)
-2022-10-26 15:46:52.513  INFO 1717 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:46:52.514  INFO 1717 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 15:46:52.515  INFO 1717 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-26 15:46:54.188  INFO 1729 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1729 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
-2022-10-26 15:46:54.189  INFO 1729 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
-2022-10-26 15:46:54.414  INFO 1729 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 15:46:54.435  INFO 1729 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
-2022-10-26 15:46:54.606  INFO 1729 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-10-26 15:46:54.609  INFO 1729 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-26 15:46:54.609  INFO 1729 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-10-26 15:46:54.665  INFO 1729 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-26 15:46:54.665  INFO 1729 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 458 ms
-2022-10-26 15:46:54.731  INFO 1729 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 15:46:54.748  INFO 1729 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-10-26 15:46:54.799  INFO 1729 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 15:46:54.825  INFO 1729 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-26 15:46:54.890  INFO 1729 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-26 15:46:54.897  INFO 1729 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 15:46:55.120  INFO 1729 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 15:46:55.125  INFO 1729 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:46:55.725  WARN 1729 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-26 15:46:55.752 DEBUG 1729 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2022-10-26 15:46:55.773 DEBUG 1729 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
-2022-10-26 15:46:55.782 DEBUG 1729 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2022-10-26 15:46:55.787 DEBUG 1729 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2022-10-26 15:46:55.851  INFO 1729 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-10-26 15:46:55.856  INFO 1729 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.807 seconds (JVM running for 2.002)
-2022-10-26 15:48:12.941 ERROR 1729 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "com.example.learnenglishtelegrambot.model.Word.getTranslation()" because "word" is null
-
-java.lang.NullPointerException: Cannot invoke "com.example.learnenglishtelegrambot.model.Word.getTranslation()" because "word" is null
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.nextWord(TelegramBot.java:116) ~[main/:na]
-	at com.example.learnenglishtelegrambot.telegram.TelegramBot.onUpdateReceived(TelegramBot.java:76) ~[main/:na]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
-
-2022-10-26 15:50:48.572  INFO 1729 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 15:50:48.573  INFO 1729 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-26 15:50:48.574  INFO 1729 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-27 17:35:46.679  INFO 1277 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1277 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-10-27 17:35:46.680  INFO 1277 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-10-27 17:35:46.935  INFO 1277 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-27 17:35:46.986  INFO 1277 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2022-10-27 17:35:47.205  INFO 1277 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-27 17:35:47.209  INFO 1277 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-27 17:35:47.209  INFO 1277 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-27 17:35:47.261  INFO 1277 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-27 17:35:47.261  INFO 1277 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 564 ms
+2022-10-27 17:35:47.320  INFO 1277 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-27 17:35:47.339  INFO 1277 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-10-27 17:35:47.392  INFO 1277 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-27 17:35:47.420  INFO 1277 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-27 17:35:47.490  INFO 1277 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-27 17:35:47.497  INFO 1277 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-27 17:35:47.713  INFO 1277 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-27 17:35:47.717  INFO 1277 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-27 17:35:49.058  WARN 1277 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-27 17:35:49.088 DEBUG 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-10-27 17:35:49.108 DEBUG 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-10-27 17:35:49.117 DEBUG 1277 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-10-27 17:35:49.121 DEBUG 1277 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-10-27 17:35:49.177  INFO 1277 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-27 17:35:49.182  INFO 1277 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.638 seconds (JVM running for 2.888)
+2022-10-27 17:36:27.681  WARN 1277 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2022-10-27 17:38:03.965  INFO 1277 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-27 17:38:03.966  INFO 1277 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-27 17:38:03.967  INFO 1277 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -6,6 +6,7 @@ import com.example.learnenglishtelegrambot.model.Word;
 import com.example.learnenglishtelegrambot.repository.UserRepository;
 import com.example.learnenglishtelegrambot.service.UserService;
 import com.example.learnenglishtelegrambot.service.WordService;
+import com.example.learnenglishtelegrambot.utils.AnswerDecorator;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +14,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
-import org.telegram.telegrambots.meta.api.methods.CopyMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -37,11 +37,12 @@ public class TelegramBot extends TelegramLongPollingBot {
     private final Client client;
     private boolean quizRunning;
     private Quiz quiz;
+    private final AnswerDecorator answerDecorator;
 
 
 
     public TelegramBot(UserService userService, WordService wordService, UserRepository userRepository, @Value("${telegram-bot.name}")
-            String botUsername, @Value("${telegram-bot.token}") String botToken, TelegramBotsApi telegramBotsApi, Client client) throws TelegramApiException {
+            String botUsername, @Value("${telegram-bot.token}") String botToken, TelegramBotsApi telegramBotsApi, Client client, AnswerDecorator answerDecorator) throws TelegramApiException {
         this.userService = userService;
         this.wordService = wordService;
         this.userRepository = userRepository;
@@ -49,6 +50,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         this.botToken = botToken;
         this.telegramBotsApi = telegramBotsApi;
         this.client = client;
+        this.answerDecorator = answerDecorator;
         telegramBotsApi.registerBot(this);
 
     }
@@ -81,7 +83,6 @@ public class TelegramBot extends TelegramLongPollingBot {
             switch (msgValue) {
                 case "/all" -> answer = wordService.getWords(user);
                 case "/5" -> {
-                    System.out.println(1);
                     answer = wordService.getWords(user, 5);
                 }
                 case "/10" -> answer = wordService.getWords(user, 10);
@@ -89,11 +90,11 @@ public class TelegramBot extends TelegramLongPollingBot {
             }
 
             if (msgValue.equals("/quiz")){
+                if (quizRunning) return;
                 quiz = new Quiz(wordService,user);
                 quiz.initQuiz();
                 quizRunning = true;
                 nextWord(usersId);
-                answer = "ee";
 
             }
         }
@@ -112,6 +113,10 @@ public class TelegramBot extends TelegramLongPollingBot {
     }
 
     private void nextWord(Long userId){
+        if (quiz.end()) {
+            quizRunning = false;
+            return;
+        }
         Word word = quiz.next();
         sendText(userId,word.getTranslation());
 
@@ -132,11 +137,11 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private String createAnswer(String answer,Word word){
         String wordValue = word.getValue();
-        StringBuilder sb = new StringBuilder("Your answer");
-        sb.append(answer.equals(wordValue) ? "is correct": "isn't correct");
+        StringBuilder sb = new StringBuilder("Your answer ");
+        sb.append(answer.equals(wordValue) ? "<b>is correct</b>" : "<b>isn't correct</b>");
         sb.append("\n");
-        sb.append("your answer: ").append(answer);
-        sb.append("\t correct answer: ").append(wordValue);
+        sb.append("your answer: ").append(answerDecorator.decor(answer)).append("\n");
+        sb.append("correct answer: ").append(answerDecorator.decor(wordValue)).append("\n");
         return sb.toString();
 
 
@@ -178,18 +183,6 @@ public class TelegramBot extends TelegramLongPollingBot {
 
 
 
-    public void copyMessage(Long who,Integer msgId){
-        CopyMessage cm = CopyMessage.builder()
-                .fromChatId(who.toString())
-                .chatId(who.toString())
-                .messageId(msgId)
-                .build();
-
-        try {
-            execute(cm);
-        }catch (TelegramApiException e){
-            throw new RuntimeException(e);
-        }
     }
 
 
@@ -197,4 +190,4 @@ public class TelegramBot extends TelegramLongPollingBot {
 
 
 
-}
+

@@ -39,8 +39,6 @@ public class Quiz {
         switch (QUIZ_MODE){
             case NEW -> words = wordService.getNewWords(user);
             case NORMAL -> words = wordService.getAllWordsByUser(user);
-
-
         }
         while (quizWords.size() < QUIZ_SIZE){
             quizWords.add(words.get(random.nextInt(words.size())));
@@ -67,5 +65,9 @@ public class Quiz {
 
     public Word poll() {
         return queue.poll();
+    }
+
+    public boolean end() {
+        return queue.isEmpty();
     }
 }
