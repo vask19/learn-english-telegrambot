@@ -1,5 +1,6 @@
 package com.example.learnenglishtelegrambot.model;
 
+import com.example.learnenglishtelegrambot.telegram.enams.State;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,5 +22,9 @@ public class CustomUser {
     @ToString.Exclude
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Word> words;
+
+
+    @Enumerated
+    private State botState;
 
 }
