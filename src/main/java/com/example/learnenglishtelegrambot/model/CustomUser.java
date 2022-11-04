@@ -23,8 +23,10 @@ public class CustomUser {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Word> words;
 
+    private String name;
 
     @Enumerated
     private State botState;
+
 
 }

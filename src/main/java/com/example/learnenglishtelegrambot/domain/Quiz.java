@@ -70,4 +70,5 @@ public class Quiz {
     public boolean end() {
         return queue.isEmpty();
     }
+
 }

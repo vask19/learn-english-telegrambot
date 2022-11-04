@@ -37,4 +37,8 @@ public class UserService {
                 .build());
 
     }
+
+    public CustomUser save(CustomUser user) {
+        return userRepository.save(user);
+    }
 }

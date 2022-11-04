@@ -1,35 +1,35 @@
 package com.example.learnenglishtelegrambot.handler;
 
-import com.whiskels.telegram.bot.State;
-import com.whiskels.telegram.model.User;
-import com.whiskels.telegram.repository.JpaUserRepository;
+import com.example.learnenglishtelegrambot.model.CustomUser;
+import com.example.learnenglishtelegrambot.service.UserService;
+import com.example.learnenglishtelegrambot.telegram.enams.State;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
 import java.io.Serializable;
 import java.util.List;
 
-import static com.whiskels.telegram.bot.handler.QuizHandler.QUIZ_START;
-import static com.whiskels.telegram.util.TelegramUtil.createInlineKeyboardButton;
-import static com.whiskels.telegram.util.TelegramUtil.createMessageTemplate;
+import static com.example.learnenglishtelegrambot.handler.QuizHandler.QUIZ_START;
+import static com.example.learnenglishtelegrambot.util.TelegramUtil.createInlineKeyboardButton;
+
 
 @Component
+@RequiredArgsConstructor
 public class RegistrationHandler implements Handler {
     //Храним поддерживаемые CallBackQuery в виде констант
     public static final String NAME_ACCEPT = "/enter_name_accept";
     public static final String NAME_CHANGE = "/enter_name";
     public static final String NAME_CHANGE_CANCEL = "/enter_name_cancel";
 
-    private final JpaUserRepository userRepository;
+    private final UserService userService;
 
-    public RegistrationHandler(JpaUserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     @Override
-    public List<partialbotapimethod<? extends="" serializable="">> handle(User user, String message) {
+    public List<PartialBotApiMethod<? extends Serializable>> handle(CustomUser user, String message) {
         // Проверяем тип полученного события
         if (message.equalsIgnoreCase(NAME_ACCEPT) || message.equalsIgnoreCase(NAME_CHANGE_CANCEL)) {
             return accept(user);
@@ -40,59 +40,73 @@ public class RegistrationHandler implements Handler {
 
     }
 
-    private List<partialbotapimethod<? extends="" serializable="">> accept(User user) {
+    private  List<PartialBotApiMethod<? extends Serializable>> accept(CustomUser user) {
         // Если пользователь принял имя - меняем статус и сохраняем
         user.setBotState(State.NONE);
-        userRepository.save(user);
+        userService.save(user);
 
         // Создаем кнопку для начала игры
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
 
-        List<inlinekeyboardbutton> inlineKeyboardButtonsRowOne = List.of(
+        List<InlineKeyboardButton> inlineKeyboardButtonsRowOne = List.of(
                 createInlineKeyboardButton("Start quiz", QUIZ_START));
 
         inlineKeyboardMarkup.setKeyboard(List.of(inlineKeyboardButtonsRowOne));
 
-        return List.of(createMessageTemplate(user).setText(String.format(
+        SendMessage sendMessage = SendMessage.builder()
+                .replyMarkup(inlineKeyboardMarkup)
+                .text(String.format(
                 "Your name is saved as: %s", user.getName()))
-                .setReplyMarkup(inlineKeyboardMarkup));
+                .build();
+
+        return List.of(sendMessage);
+
     }
 
-    private List<partialbotapimethod<? extends="" serializable="">> checkName(User user, String message) {
+    private  List<PartialBotApiMethod<? extends Serializable>> checkName(CustomUser user, String message) {
         // При проверке имени мы превентивно сохраняем пользователю новое имя в базе
         // идея для рефакторинга - добавить временное хранение имени
-        user.setName(message);
-        userRepository.save(user);
+       // user.setName(message);
+        userService.save(user);
 
         // Делаем кнопку для применения изменений
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
 
-        List<inlinekeyboardbutton> inlineKeyboardButtonsRowOne = List.of(
+        List<InlineKeyboardButton> inlineKeyboardButtonsRowOne = List.of(
                 createInlineKeyboardButton("Accept", NAME_ACCEPT));
 
         inlineKeyboardMarkup.setKeyboard(List.of(inlineKeyboardButtonsRowOne));
 
-        return List.of(createMessageTemplate(user)
-                .setText(String.format("You have entered: %s%nIf this is correct - press the button", user.getName()))
-                .setReplyMarkup(inlineKeyboardMarkup));
+        SendMessage sendMessage = SendMessage.builder()
+                .replyMarkup(inlineKeyboardMarkup)
+                .text(String.format("You have entered: %s%nIf this is correct - press the button", user.getName()))
+                .build();
+
+        return List.of(sendMessage);
+
     }
 
-    private List<partialbotapimethod<? extends="" serializable="">> changeName(User user) {
+    private  List<PartialBotApiMethod<? extends Serializable>> changeName(CustomUser user) {
         // При запросе изменения имени мы меняем State
-        user.setBotState(State.ENTER_NAME);
-        userRepository.save(user);
+      //  user.setBotState(State.ENTER_NAME);
+        userService.save(user);
 
         // Создаем кнопку для отмены операции
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
 
-        List<inlinekeyboardbutton> inlineKeyboardButtonsRowOne = List.of(
+        List<InlineKeyboardButton> inlineKeyboardButtonsRowOne = List.of(
                 createInlineKeyboardButton("Cancel", NAME_CHANGE_CANCEL));
 
         inlineKeyboardMarkup.setKeyboard(List.of(inlineKeyboardButtonsRowOne));
 
-        return List.of(createMessageTemplate(user).setText(String.format(
-                "Your current name is: %s%nEnter new name or press the button to continue", user.getName()))
-                .setReplyMarkup(inlineKeyboardMarkup));
+
+        SendMessage sendMessage = SendMessage.builder()
+                .replyMarkup(inlineKeyboardMarkup)
+                .text(String.format(
+                        "Your current name is: %s%nEnter new name or press the button to continue", user.getName()))
+                .build();
+
+        return List.of(sendMessage);
     }
 
     @Override
@@ -101,7 +115,7 @@ public class RegistrationHandler implements Handler {
     }
 
     @Override
-    public List<string> operatedCallBackQuery() {
+    public List<String> operatedCallBackQuery() {
         return List.of(NAME_ACCEPT, NAME_CHANGE, NAME_CHANGE_CANCEL);
     }
 }
