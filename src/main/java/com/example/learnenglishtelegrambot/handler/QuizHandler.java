@@ -2,8 +2,12 @@ package com.example.learnenglishtelegrambot.handler;
 
 import com.example.learnenglishtelegrambot.domain.Quiz;
 import com.example.learnenglishtelegrambot.model.CustomUser;
+import com.example.learnenglishtelegrambot.model.Word;
 import com.example.learnenglishtelegrambot.repository.UserRepository;
 import com.example.learnenglishtelegrambot.service.QuizService;
+import com.example.learnenglishtelegrambot.service.UserService;
+import com.example.learnenglishtelegrambot.service.WordService;
+import com.example.learnenglishtelegrambot.telegram.enams.QuizMode;
 import com.example.learnenglishtelegrambot.telegram.enams.State;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,9 +18,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.*;
 
 import static com.example.learnenglishtelegrambot.util.TelegramUtil.createInlineKeyboardButton;
+import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessageTemplate;
 
 
 @Slf4j
@@ -32,20 +37,35 @@ public class QuizHandler implements Handler {
 
     private final UserRepository userRepository;
     private final QuizService quizService;
+    private final UserService userService;
+
+    private static final int QUIZ_SIZE = 3;
+    private static final QuizMode QUIZ_MODE = QuizMode.NORMAL;
+    private final WordService wordService;
+    private Quiz quiz;
+    private String lastAnswer;
 
 
     @Override
     public List<PartialBotApiMethod<? extends Serializable>> handle(CustomUser user, String message) {
-        if (message.startsWith(QUIZ_CORRECT)) {
-            // действие на коллбек с правильным ответом
-            return correctAnswer(user, message);
-        } else if (message.startsWith(QUIZ_INCORRECT)) {
-            // действие на коллбек с неправильным ответом
-            return incorrectAnswer(user);
-        } else {
-            return startNewQuiz(user);
+        log.info("quiz handler started");
+        if (lastAnswer != null) {
+            if (lastAnswer.equals(QUIZ_CORRECT)) {
+                // действие на коллбек с правильным ответом
+                return correctAnswer(user, message);
+            } else if (lastAnswer.equals(QUIZ_INCORRECT)) {
+                // действие на коллбек с неправильным ответом
+                return incorrectAnswer(user, message);
+            }
         }
+        return startNewQuiz(user, message);
+
+
     }
+
+
+
+
 
     private List<PartialBotApiMethod<? extends Serializable>> correctAnswer(CustomUser user, String message) {
         log.info("correct");
@@ -53,10 +73,10 @@ public class QuizHandler implements Handler {
        // user.setScore(currentScore);
         userRepository.save(user);
 
-        return nextQuestion(user);
+        return nextQuestion(user,message);
     }
 
-    private List<PartialBotApiMethod<? extends Serializable>> incorrectAnswer(CustomUser user) {
+    private List<PartialBotApiMethod<? extends Serializable>> incorrectAnswer(CustomUser user,String message) {
 //        final int currentScore = user.getScore();
 //        // Обновляем лучший итог
 //        if (user.getHighScore() < currentScore) {
@@ -87,58 +107,65 @@ public class QuizHandler implements Handler {
 
     }
 
-    private List<PartialBotApiMethod<? extends Serializable>> startNewQuiz(CustomUser user) {
+   private List<PartialBotApiMethod<? extends Serializable>> startNewQuiz(CustomUser user,String message) {
         user.setBotState(State.PLAYING_QUIZ);
-        userRepository.save(user);
+        user = userService.save(user);
 
-        return nextQuestion(user);
+        initQuiz(user);
+        return nextQuestion(user,message);
     }
 
-    private List<PartialBotApiMethod<? extends Serializable>> nextQuestion(CustomUser user) {
-        Quiz quiz = quizService.getQuiz();
-//
-//        // Собираем список возможных вариантов ответа
-//        List<String> options = new ArrayList<>(List.of(quiz.getCorrectAnswer(), question.getOptionOne(), question.getOptionTwo(), question.getOptionThree()));
-//        // Перемешиваем
-//        Collections.shuffle(options);
-//
-//        // Начинаем формировать сообщение с вопроса
-//        StringBuilder sb = new StringBuilder();
-//        sb.append('*')
-//                .append(question.getQuestion())
-//                .append("*\n\n");
-//
-//        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-//
-//        // Создаем два ряда кнопок
-//        List<InlineKeyboardButton> inlineKeyboardButtonsRowOne = new ArrayList<>();
-//        List<InlineKeyboardButton> inlineKeyboardButtonsRowTwo = new ArrayList<>();
-//
-//        // Формируем сообщение и записываем CallBackData на кнопки
-//        for (int i = 0; i < options.size(); i++) {
-//            InlineKeyboardButton button = new InlineKeyboardButton();
-//
-//            final String callbackData = options.get(i).equalsIgnoreCase(question.getCorrectAnswer()) ? QUIZ_CORRECT : QUIZ_INCORRECT;
-//
-//            button.setText(OPTIONS.get(i))
-//                    .setCallbackData(String.format("%s %d", callbackData, question.getId()));
-//
-//            if (i < 2) {
-//                inlineKeyboardButtonsRowOne.add(button);
-//            } else {
-//                inlineKeyboardButtonsRowTwo.add(button);
-//            }
-//            sb.append(OPTIONS.get(i) + ". " + options.get(i));
-//            sb.append("\n");
-//        }
-//
-//        inlineKeyboardMarkup.setKeyboard(List.of(inlineKeyboardButtonsRowOne, inlineKeyboardButtonsRowTwo));
-//        return List.of(createMessageTemplate(user)
-//                .setText(sb.toString())
-//                .setReplyMarkup(inlineKeyboardMarkup));
+    private List<PartialBotApiMethod<? extends Serializable>> nextQuestion(CustomUser user,String message) {
 
-        return null;
+
+        // Начинаем формировать сообщение с вопроса
+        Word nextWord = quiz.next();
+        String callbackData = "";
+
+        System.out.println(message);
+
+        System.out.println("------" + nextWord);
+        if (message != null){
+            callbackData = message.equals(nextWord.getValue()) ? QUIZ_CORRECT : QUIZ_INCORRECT;
+
+        }
+        lastAnswer = callbackData;
+        System.out.println(lastAnswer);
+        String text = "rr";
+        SendMessage sendMessage = createMessageTemplate(user, text);
+
+
+        return List.of(sendMessage);
+
     }
+
+
+    //TODO : abstract fabric
+    public void initQuiz(CustomUser user){
+        this.quiz = new Quiz();
+
+        Random random = new Random();
+        Set<Word> quizWords = new HashSet<>();
+        List<Word> words = new ArrayList<>();
+
+
+        switch (QUIZ_MODE){
+            case NEW -> words = wordService.getNewWords(user);
+            case NORMAL -> words = wordService.getAllWordsByUser(user);
+        }
+        while (quizWords.size() < QUIZ_SIZE & QUIZ_SIZE <= words.size()){
+            quizWords.add(words.get(random.nextInt(words.size())));
+
+        }
+        quiz.setQueue(new LinkedList<>(quizWords));
+
+    }
+
+
+
+
+
+
 
     @Override
     public State operatedBotState() {

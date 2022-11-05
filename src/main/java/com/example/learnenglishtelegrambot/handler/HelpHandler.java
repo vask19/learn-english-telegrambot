@@ -14,6 +14,7 @@ import java.util.List;
 
 import static com.example.learnenglishtelegrambot.handler.RegistrationHandler.NAME_CHANGE;
 import static com.example.learnenglishtelegrambot.util.TelegramUtil.createInlineKeyboardButton;
+import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessageTemplate;
 
 
 @Component
@@ -30,12 +31,11 @@ public class HelpHandler implements Handler {
         inlineKeyboardMarkup.setKeyboard(List.of(inlineKeyboardButtonsRowOne));
 
 
+        String text = String.format("" +
+                "You've asked for help %s? Here it comes!", user.getName());
+        SendMessage sendMessage = createMessageTemplate(user,text);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
 
-        SendMessage sendMessage = SendMessage.builder()
-                .replyMarkup(inlineKeyboardMarkup)
-                .text(String.format("" +
-                                "You've asked for help %s? Here it comes!", user.getName()))
-                .build();
 
 
         return List.of(sendMessage);

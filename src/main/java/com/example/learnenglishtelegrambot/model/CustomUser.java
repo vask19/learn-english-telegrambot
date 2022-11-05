@@ -26,7 +26,8 @@ public class CustomUser {
     private String name;
 
     @Enumerated
-    private State botState;
+    @Builder.Default
+    private State botState = State.START;
 
 
 }

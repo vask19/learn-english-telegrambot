@@ -15,6 +15,7 @@ import java.util.List;
 
 import static com.example.learnenglishtelegrambot.handler.QuizHandler.QUIZ_START;
 import static com.example.learnenglishtelegrambot.util.TelegramUtil.createInlineKeyboardButton;
+import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessageTemplate;
 
 
 @Component
@@ -54,6 +55,7 @@ public class RegistrationHandler implements Handler {
         inlineKeyboardMarkup.setKeyboard(List.of(inlineKeyboardButtonsRowOne));
 
         SendMessage sendMessage = SendMessage.builder()
+                .chatId(String.valueOf(user.getId()))
                 .replyMarkup(inlineKeyboardMarkup)
                 .text(String.format(
                 "Your name is saved as: %s", user.getName()))
@@ -66,7 +68,7 @@ public class RegistrationHandler implements Handler {
     private  List<PartialBotApiMethod<? extends Serializable>> checkName(CustomUser user, String message) {
         // При проверке имени мы превентивно сохраняем пользователю новое имя в базе
         // идея для рефакторинга - добавить временное хранение имени
-       // user.setName(message);
+        user.setName(message);
         userService.save(user);
 
         // Делаем кнопку для применения изменений
@@ -79,6 +81,7 @@ public class RegistrationHandler implements Handler {
 
         SendMessage sendMessage = SendMessage.builder()
                 .replyMarkup(inlineKeyboardMarkup)
+                .chatId(String.valueOf(user.getId()))
                 .text(String.format("You have entered: %s%nIf this is correct - press the button", user.getName()))
                 .build();
 
@@ -88,7 +91,7 @@ public class RegistrationHandler implements Handler {
 
     private  List<PartialBotApiMethod<? extends Serializable>> changeName(CustomUser user) {
         // При запросе изменения имени мы меняем State
-      //  user.setBotState(State.ENTER_NAME);
+        user.setBotState(State.ENTER_NAME);
         userService.save(user);
 
         // Создаем кнопку для отмены операции
@@ -100,11 +103,9 @@ public class RegistrationHandler implements Handler {
         inlineKeyboardMarkup.setKeyboard(List.of(inlineKeyboardButtonsRowOne));
 
 
-        SendMessage sendMessage = SendMessage.builder()
-                .replyMarkup(inlineKeyboardMarkup)
-                .text(String.format(
-                        "Your current name is: %s%nEnter new name or press the button to continue", user.getName()))
-                .build();
+        String  text =String.format(
+                "Your current name is: %s%nEnter new name or press the button to continue", user.getName());
+        SendMessage sendMessage = createMessageTemplate(user,text);
 
         return List.of(sendMessage);
     }

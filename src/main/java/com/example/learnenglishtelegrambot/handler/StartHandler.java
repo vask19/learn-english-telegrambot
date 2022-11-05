@@ -17,7 +17,7 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 public class StartHandler implements Handler {
-    @Value("${bot.name}")
+    @Value("${telegram-bot.name}")
     private String botUsername;
     private final UserService userService;
 

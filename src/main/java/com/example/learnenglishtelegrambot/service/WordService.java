@@ -1,4 +1,5 @@
 package com.example.learnenglishtelegrambot.service;
+
 import com.example.learnenglishtelegrambot.google.translateapi.Client;
 import com.example.learnenglishtelegrambot.model.CustomUser;
 import com.example.learnenglishtelegrambot.model.Word;
@@ -7,7 +8,7 @@ import com.example.learnenglishtelegrambot.repository.WordRepository;
 import com.example.learnenglishtelegrambot.utils.AnswerDecorator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.telegram.telegrambots.meta.api.objects.User;
+
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
@@ -21,10 +22,9 @@ public class WordService {
     private final UserService userService;
     private final AnswerDecorator answerDecorator;
 
-    public List<Word> getAllWordsByUser(User user){
-        CustomUser customUser = userService.getUser(user);
+    public List<Word> getAllWordsByUser(CustomUser user){
 
-        return wordRepository.findAllByUser(customUser);
+        return wordRepository.findAllByUser(user);
     }
 
 
@@ -55,13 +55,13 @@ public class WordService {
     }
 
 
-    public String getWords(User user){
+    public String getWords(CustomUser user){
         List<Word> words = getAllWordsByUser(user);
         return createStringForAnswer(words).toString();
 
     }
 
-    public String getWords(User user, Integer amount) {
+    public String getWords(CustomUser user, Integer amount) {
         List<Word> words = getAllWordsByUser(user);
         if (amount >= words.size()){
             amount = words.size();
@@ -89,9 +89,8 @@ public class WordService {
         return sb;
     }
 
-    public List<Word> getNewWords(User user) {
-        CustomUser customUser = userService.getUser(user);
-        List<Word> words = wordRepository.getAllNewWordsByUser(customUser);
+    public List<Word> getNewWords(CustomUser user) {
+        List<Word> words = wordRepository.getAllNewWordsByUser(user);
         return words;
     }
 

@@ -1,38 +1,47 @@
 package com.example.learnenglishtelegrambot.telegram;
 
 import com.example.learnenglishtelegrambot.handler.UpdateReceiver;
-import lombok.Getter;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.io.Serializable;
 import java.util.List;
 
+import static com.example.learnenglishtelegrambot.handler.QuizHandler.QUIZ_START;
+
 @Slf4j
 @Component
-public class Bot extends TelegramLongPollingBot {
-    @Value("${bot.name}")
-    @Getter
+@Data
+public class LearnEnglishBot extends TelegramLongPollingBot {
     private String botUsername;
 
-    @Value("${bot.token}")
-    @Getter
     private String botToken;
 
     private final UpdateReceiver updateReceiver;
+    private final TelegramBotsApi telegramBotsApi;
 
-    public Bot(UpdateReceiver updateReceiver) {
+    public LearnEnglishBot( @Value("${telegram-bot.name}")  String botUsername, @Value("${telegram-bot.token}") String botToken,
+                            UpdateReceiver updateReceiver, TelegramBotsApi telegramBotsApi) throws TelegramApiException {
         this.updateReceiver = updateReceiver;
+        this.telegramBotsApi = telegramBotsApi;
+        this.botToken = botToken;
+        this.botUsername = botUsername;
+        telegramBotsApi.registerBot(this);
     }
+
 
     @Override
     public void onUpdateReceived(Update update) {
+        update.setCallbackQuery(createCallbackQuery(update));
         List<PartialBotApiMethod<? extends Serializable>> messagesToSend = updateReceiver.handle(update);
 
         if (messagesToSend != null && !messagesToSend.isEmpty()) {
@@ -42,6 +51,15 @@ public class Bot extends TelegramLongPollingBot {
                 }
             });
         }
+    }
+
+    private CallbackQuery createCallbackQuery(Update update){
+
+        CallbackQuery callbackQuery = new CallbackQuery();
+        callbackQuery.setFrom(update.getMessage().getFrom());
+        callbackQuery.setData(QUIZ_START);
+        return callbackQuery;
+
     }
 
     public void executeWithExceptionCheck(SendMessage sendMessage) {

@@ -31,6 +31,14 @@ public class UserService {
                saveUser(id);
     }
 
+    @Transactional
+    public CustomUser getUser(Long chatId) {
+
+        return userRepository.findById(chatId).isPresent() ?
+                userRepository.findById(chatId).get() :
+                saveUser(chatId);
+    }
+
     public CustomUser saveUser(Long id){;
         return userRepository.save(CustomUser.builder()
                 .id(id)

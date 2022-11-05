@@ -31,6 +31,7 @@ public class UpdateReceiver {
     public List<PartialBotApiMethod<? extends Serializable>> handle(Update update) {
         // try-catch, чтобы при несуществующей команде просто возвращать пустой список
         try {
+
             // Проверяем, если Update - сообщение с текстом
             if (isMessageWithText(update)) {
                 // Получаем Message из Update
@@ -47,10 +48,9 @@ public class UpdateReceiver {
 
             } else if (update.hasCallbackQuery()) {
                 final CallbackQuery callbackQuery = update.getCallbackQuery();
-                User user = update.getMessage().getFrom();
-                final  CustomUser customUser = userService.getUser(user);
+                final  CustomUser customUser = userService.getUser(update.getCallbackQuery().getFrom());
 
-                return getHandlerByCallBackQuery(callbackQuery.getData()).handle(customUser, callbackQuery.getData());
+                return getHandlerByCallBackQuery(callbackQuery.getData()).handle(customUser, update.getMessage().getText());
             }
 
             throw new UnsupportedOperationException();
