@@ -1,6 +1,9 @@
 package com.example.learnenglishtelegrambot.telegram;
 
 import com.example.learnenglishtelegrambot.handler.UpdateReceiver;
+import com.example.learnenglishtelegrambot.model.CustomUser;
+import com.example.learnenglishtelegrambot.service.UserService;
+import com.example.learnenglishtelegrambot.telegram.enams.State;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +14,7 @@ import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.io.Serializable;
@@ -26,11 +30,13 @@ public class LearnEnglishBot extends TelegramLongPollingBot {
 
     private String botToken;
 
+    private final UserService userService;
     private final UpdateReceiver updateReceiver;
     private final TelegramBotsApi telegramBotsApi;
 
-    public LearnEnglishBot( @Value("${telegram-bot.name}")  String botUsername, @Value("${telegram-bot.token}") String botToken,
-                            UpdateReceiver updateReceiver, TelegramBotsApi telegramBotsApi) throws TelegramApiException {
+    public LearnEnglishBot(@Value("${telegram-bot.name}") String botUsername, @Value("${telegram-bot.token}") String botToken,
+                           UserService userService, UpdateReceiver updateReceiver, TelegramBotsApi telegramBotsApi) throws TelegramApiException {
+        this.userService = userService;
         this.updateReceiver = updateReceiver;
         this.telegramBotsApi = telegramBotsApi;
         this.botToken = botToken;
@@ -41,7 +47,15 @@ public class LearnEnglishBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        update.setCallbackQuery(createCallbackQuery(update));
+        if (update.hasMessage()){
+            User user = update.getMessage().getFrom();
+            CallbackQuery callbackQuery = new CallbackQuery();
+            CustomUser customUser = userService.getUser(user.getId());
+            if (customUser.getBotState().equals(State.PLAYING_QUIZ)) {
+                update.setCallbackQuery(createCallbackQuery(update));
+            }
+        }
+
         List<PartialBotApiMethod<? extends Serializable>> messagesToSend = updateReceiver.handle(update);
 
         if (messagesToSend != null && !messagesToSend.isEmpty()) {
@@ -56,9 +70,11 @@ public class LearnEnglishBot extends TelegramLongPollingBot {
     private CallbackQuery createCallbackQuery(Update update){
 
         CallbackQuery callbackQuery = new CallbackQuery();
+        callbackQuery = new CallbackQuery();
         callbackQuery.setFrom(update.getMessage().getFrom());
         callbackQuery.setData(QUIZ_START);
         return callbackQuery;
+
 
     }
 

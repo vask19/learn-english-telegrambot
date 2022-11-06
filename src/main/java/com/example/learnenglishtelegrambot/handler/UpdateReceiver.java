@@ -50,7 +50,7 @@ public class UpdateReceiver {
                 final CallbackQuery callbackQuery = update.getCallbackQuery();
                 final  CustomUser customUser = userService.getUser(update.getCallbackQuery().getFrom());
 
-                return getHandlerByCallBackQuery(callbackQuery.getData()).handle(customUser, update.getMessage().getText());
+                return getHandlerByCallBackQuery(callbackQuery.getData()).handle(customUser, update.getCallbackQuery().getData());
             }
 
             throw new UnsupportedOperationException();

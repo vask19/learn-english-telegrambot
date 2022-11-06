@@ -39,6 +39,7 @@ public class UserService {
                 saveUser(chatId);
     }
 
+    @Transactional
     public CustomUser saveUser(Long id){;
         return userRepository.save(CustomUser.builder()
                 .id(id)
@@ -46,6 +47,7 @@ public class UserService {
 
     }
 
+    @Transactional
     public CustomUser save(CustomUser user) {
         return userRepository.save(user);
     }

@@ -17,6 +17,7 @@ public class Quiz {
     private Long id;
     private Queue<Word> queue;
     private User user;
+    private Word currentWord;
 
 
     public Word next(){
