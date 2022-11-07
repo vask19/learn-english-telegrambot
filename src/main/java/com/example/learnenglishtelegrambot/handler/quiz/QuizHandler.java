@@ -1,7 +1,8 @@
-package com.example.learnenglishtelegrambot.handler;
+package com.example.learnenglishtelegrambot.handler.quiz;
 
 import com.example.learnenglishtelegrambot.domain.Quiz;
 import com.example.learnenglishtelegrambot.exceptions.QuizEmptyException;
+import com.example.learnenglishtelegrambot.handler.Handler;
 import com.example.learnenglishtelegrambot.model.CustomUser;
 import com.example.learnenglishtelegrambot.model.Word;
 import com.example.learnenglishtelegrambot.repository.UserRepository;

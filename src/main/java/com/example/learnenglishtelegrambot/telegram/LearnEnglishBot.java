@@ -20,7 +20,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.io.Serializable;
 import java.util.List;
 
-import static com.example.learnenglishtelegrambot.handler.QuizHandler.QUIZ_START;
+import static com.example.learnenglishtelegrambot.handler.quiz.QuizHandler.QUIZ_START;
 
 @Slf4j
 @Component

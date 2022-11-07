@@ -13,7 +13,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 import java.io.Serializable;
 import java.util.List;
 
-import static com.example.learnenglishtelegrambot.handler.QuizHandler.QUIZ_START;
+import static com.example.learnenglishtelegrambot.handler.quiz.StartingQuizHandler.*;
 import static com.example.learnenglishtelegrambot.util.TelegramUtil.createInlineKeyboardButton;
 import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessageTemplate;
 
@@ -25,6 +25,7 @@ public class RegistrationHandler implements Handler {
     public static final String NAME_ACCEPT = "/enter_name_accept";
     public static final String NAME_CHANGE = "/enter_name";
     public static final String NAME_CHANGE_CANCEL = "/enter_name_cancel";
+    private CustomUser customUser;
 
     private final UserService userService;
 
@@ -50,7 +51,7 @@ public class RegistrationHandler implements Handler {
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
 
         List<InlineKeyboardButton> inlineKeyboardButtonsRowOne = List.of(
-                createInlineKeyboardButton("Start quiz", QUIZ_START));
+            createInlineKeyboardButton("Start quiz", STARTING_QUIZ));
 
         inlineKeyboardMarkup.setKeyboard(List.of(inlineKeyboardButtonsRowOne));
 
@@ -94,6 +95,7 @@ public class RegistrationHandler implements Handler {
         user.setBotState(State.ENTER_NAME);
         userService.save(user);
 
+
         // Создаем кнопку для отмены операции
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
 
@@ -114,6 +116,7 @@ public class RegistrationHandler implements Handler {
     public State operatedBotState() {
         return State.ENTER_NAME;
     }
+
 
     @Override
     public List<String> operatedCallBackQuery() {

@@ -5,4 +5,6 @@ public enum State {
     START,
     ENTER_NAME,
     PLAYING_QUIZ,
+    END_QUIZ,
+    STARTING_QUIZ
 }
