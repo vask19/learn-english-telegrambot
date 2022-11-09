@@ -1,6 +1,6 @@
 package com.example.learnenglishtelegrambot.service;
 
-import com.example.learnenglishtelegrambot.model.CustomUser;
+import com.example.learnenglishtelegrambot.model.CustomerUser;
 import com.example.learnenglishtelegrambot.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,16 +15,16 @@ public class UserService {
     private final UserRepository userRepository;
 
 
-    private void saveUser(CustomUser user){
+    private void saveUser(CustomerUser user){
         userRepository.save(user);
     }
 
-    public List<CustomUser> getAll() {
+    public List<CustomerUser> getAll() {
         return userRepository.findAll();
     }
 
     @Transactional
-    public CustomUser getUser(User user) {
+    public CustomerUser getUser(User user) {
         Long id = user.getId();
         return userRepository.findById(id).isPresent() ?
                 userRepository.findById(id).get() :
@@ -32,7 +32,7 @@ public class UserService {
     }
 
     @Transactional
-    public CustomUser getUser(Long chatId) {
+    public CustomerUser getUser(Long chatId) {
 
         return userRepository.findById(chatId).isPresent() ?
                 userRepository.findById(chatId).get() :
@@ -40,15 +40,15 @@ public class UserService {
     }
 
     @Transactional
-    public CustomUser saveUser(Long id){;
-        return userRepository.save(CustomUser.builder()
+    public CustomerUser saveUser(Long id){;
+        return userRepository.save(CustomerUser.builder()
                 .id(id)
                 .build());
 
     }
 
     @Transactional
-    public CustomUser save(CustomUser user) {
+    public CustomerUser save(CustomerUser user) {
         return userRepository.save(user);
     }
 }

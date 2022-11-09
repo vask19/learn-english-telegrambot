@@ -21,8 +21,12 @@ public class Word {
     private Long id;
 
     @ManyToOne(cascade = CascadeType.MERGE)
+    private CustomerUser user;
 
-    private CustomUser user;
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "quiz_id",referencedColumnName = "quiz_id")
+    private Quiz quiz;
 
     private String value;
 

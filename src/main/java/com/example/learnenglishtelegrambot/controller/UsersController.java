@@ -1,6 +1,6 @@
 package com.example.learnenglishtelegrambot.controller;
 
-import com.example.learnenglishtelegrambot.model.CustomUser;
+import com.example.learnenglishtelegrambot.model.CustomerUser;
 import com.example.learnenglishtelegrambot.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +23,7 @@ public class UsersController {
      * Возвращает список пользователей и связанных с ними планами
      */
     @RequestMapping(path = "/users_idea", method = RequestMethod.GET)
-    public List<CustomUser> getIdeaList() {
+    public List<CustomerUser> getIdeaList() {
         log.debug("Method - getIdeaList was called");
         return userService.getAll();
     }

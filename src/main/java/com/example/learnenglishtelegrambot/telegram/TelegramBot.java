@@ -1,7 +1,7 @@
 //package com.example.learnenglishtelegrambot.telegram;
-//import com.example.learnenglishtelegrambot.domain.Quiz;
+//import com.example.learnenglishtelegrambot.model.Quiz;
 //import com.example.learnenglishtelegrambot.google.translateapi.Client;
-//import com.example.learnenglishtelegrambot.model.CustomUser;
+//import com.example.learnenglishtelegrambot.model.CustomerUser;
 //import com.example.learnenglishtelegrambot.model.Word;
 //import com.example.learnenglishtelegrambot.repository.UserRepository;
 //import com.example.learnenglishtelegrambot.service.UserService;
@@ -149,7 +149,7 @@
 //    }
 //
 //    private Word saveMessage(User user, Message msg) {
-//        CustomUser customUser = userService.getUser(user);
+//        CustomerUser customUser = userService.getUser(user);
 //        Word word = Word.builder()
 //                .user(customUser)
 //                .value(msg.getText().toLowerCase(Locale.ROOT))

@@ -13,7 +13,6 @@ public class BotSettings {
     private Long settingId;
 
     @OneToOne
-    private CustomUser user;
 
     @Builder.Default
     private static final int QUIZ_SIZE = 5;

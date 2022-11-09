@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "users")
-public class CustomUser {
+public class CustomerUser {
 
     @Id
     @Column(name = "users_id")
@@ -24,6 +24,9 @@ public class CustomUser {
     private List<Word> words;
 
     private String name;
+
+    @OneToMany(mappedBy = "customerUser",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<Quiz> quizzes;
 
     @Enumerated
     @Builder.Default

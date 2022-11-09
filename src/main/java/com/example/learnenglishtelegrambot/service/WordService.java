@@ -1,7 +1,7 @@
 package com.example.learnenglishtelegrambot.service;
 
 import com.example.learnenglishtelegrambot.google.translateapi.Client;
-import com.example.learnenglishtelegrambot.model.CustomUser;
+import com.example.learnenglishtelegrambot.model.CustomerUser;
 import com.example.learnenglishtelegrambot.model.Word;
 import com.example.learnenglishtelegrambot.repository.UserRepository;
 import com.example.learnenglishtelegrambot.repository.WordRepository;
@@ -22,7 +22,7 @@ public class WordService {
     private final UserService userService;
     private final AnswerDecorator answerDecorator;
 
-    public List<Word> getAllWordsByUser(CustomUser user){
+    public List<Word> getAllWordsByUser(CustomerUser user){
 
         return wordRepository.findAllByUser(user);
     }
@@ -55,13 +55,13 @@ public class WordService {
     }
 
 
-    public String getWords(CustomUser user){
+    public String getWords(CustomerUser user){
         List<Word> words = getAllWordsByUser(user);
         return createStringForAnswer(words).toString();
 
     }
 
-    public String getWords(CustomUser user, Integer amount) {
+    public String getWords(CustomerUser user, Integer amount) {
         List<Word> words = getAllWordsByUser(user);
         if (amount >= words.size()){
             amount = words.size();
@@ -89,7 +89,7 @@ public class WordService {
         return sb;
     }
 
-    public List<Word> getNewWords(CustomUser user) {
+    public List<Word> getNewWords(CustomerUser user) {
         List<Word> words = wordRepository.getAllNewWordsByUser(user);
         return words;
     }
