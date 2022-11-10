@@ -9,7 +9,6 @@ import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 
 import java.io.Serializable;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -18,6 +17,8 @@ import java.util.List;
 public class StartHandler implements Handler {
     @Value("${telegram-bot.name}")
     private String botUsername;
+
+    private static final String START_COMMAND = "/start";
 
 
 
@@ -36,12 +37,12 @@ public class StartHandler implements Handler {
     }
 
     @Override
-    public State operatedBotState() {
-        return State.START;
+    public List<State> operatedBotState() {
+        return List.of(State.START);
     }
 
     @Override
     public List<String> operatedCallBackQuery() {
-        return Collections.emptyList();
+        return List.of(START_COMMAND);
     }
 }

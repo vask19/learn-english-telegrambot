@@ -1,6 +1,8 @@
 package com.example.learnenglishtelegrambot.handler;
 
 import com.example.learnenglishtelegrambot.domain.BotResponse;
+import com.example.learnenglishtelegrambot.model.CustomerUser;
+import com.example.learnenglishtelegrambot.service.UserService;
 import com.example.learnenglishtelegrambot.telegram.enams.State;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +11,6 @@ import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 
 import java.io.Serializable;
-import java.util.Collections;
 import java.util.List;
 
 import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessageTemplate;
@@ -20,14 +21,20 @@ import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessag
 @Slf4j
 public class HelpHandler implements Handler {
 
+    private static final String HELP_COMMAND = "/help";
+    private final UserService userService;
+
     @Override
     public List<PartialBotApiMethod<? extends Serializable>> handle(BotResponse botResponse, String message) {
         // Создаем кнопку для смены имени
 
 
         String text = "" +
-                "You've asked for help ? Here it comes!";
+                "help h";
         botResponse.setMessage(text);
+        CustomerUser customerUser = botResponse.getUser();
+        customerUser.setBotState(State.NONE);
+        userService.save(customerUser);
         SendMessage sendMessage = createMessageTemplate(botResponse);
 
 
@@ -37,12 +44,13 @@ public class HelpHandler implements Handler {
 
 
     @Override
-    public State operatedBotState() {
-        return State.NONE;
+    public List<State> operatedBotState() {
+        return List.of(State.NONE);
     }
+
 
     @Override
     public List<String> operatedCallBackQuery() {
-        return Collections.emptyList();
+        return List.of(HELP_COMMAND);
     }
 }

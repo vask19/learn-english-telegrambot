@@ -28,7 +28,7 @@ public class UserService {
         Long id = user.getId();
         return userRepository.findById(id).isPresent() ?
                 userRepository.findById(id).get() :
-               saveUser(id);
+               saveUser(user);
     }
 
     @Transactional
@@ -48,7 +48,17 @@ public class UserService {
     }
 
     @Transactional
+    public CustomerUser saveUser(User user){;
+        return userRepository.save(CustomerUser.builder()
+                .id(user.getId())
+                        .name(user.getFirstName())
+                .build());
+
+    }
+
+    @Transactional
     public CustomerUser save(CustomerUser user) {
+
         return userRepository.save(user);
     }
 }

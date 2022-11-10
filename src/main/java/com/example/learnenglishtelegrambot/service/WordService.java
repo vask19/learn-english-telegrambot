@@ -1,5 +1,6 @@
 package com.example.learnenglishtelegrambot.service;
 
+import com.example.learnenglishtelegrambot.exceptions.NotFoundException;
 import com.example.learnenglishtelegrambot.google.translateapi.Client;
 import com.example.learnenglishtelegrambot.model.CustomerUser;
 import com.example.learnenglishtelegrambot.model.Word;
@@ -92,6 +93,10 @@ public class WordService {
     public List<Word> getNewWords(CustomerUser user) {
         List<Word> words = wordRepository.getAllNewWordsByUser(user);
         return words;
+    }
+
+    public Word getWord(Long id) {
+        return wordRepository.findById(id).orElseThrow(NotFoundException::new);
     }
 
 

@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface QuizRepository extends JpaRepository<Quiz,Integer> {
+public interface QuizRepository extends JpaRepository<Quiz,Long> {
     Optional<Quiz> findByCustomerUser(CustomerUser customerUser);
 }

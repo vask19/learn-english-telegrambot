@@ -38,14 +38,25 @@ public class UpdateReceiver {
 
     // Обрабатываем полученный Update
     public List<PartialBotApiMethod<? extends Serializable>> handle(Update update) {
-        // try-catch, чтобы при несуществующей команде просто возвращать пустой список
 
-                final Message message = update.getMessage();
-                User user = update.getMessage().getFrom();
-                final CustomerUser customUser = userService.getUser(user);
+        BotResponse botResponse = createBotResponse(update);
+        final Message message = update.getMessage();
+        User user = update.getMessage().getFrom();
+        CustomerUser customUser = userService.getUser(user);
         System.out.println(customUser.getBotState());
+        botResponse.setUser(customUser);
 
-                BotResponse botResponse = createBotResponse(update);
+        if (customUser.getBotState() == null){
+            customUser.setBotState(State.NONE);
+            userService.save(customUser);
+        }
+
+        if (update.getMessage().isCommand()){
+            return getHandlerByCallBackQuery(update.getMessage().getText()).handle(botResponse,message.getText());
+        }
+
+
+
                 return getHandlerByState(customUser.getBotState()).handle(botResponse, message.getText());
 
 
@@ -59,7 +70,7 @@ public class UpdateReceiver {
         return handlers.stream()
 
                 .filter(h -> h.operatedBotState() != null)
-                .filter(h -> h.operatedBotState().equals(state))
+                .filter(h -> h.operatedBotState().contains(state))
                 .findAny()
                 .orElseThrow(UnsupportedOperationException::new);
     }

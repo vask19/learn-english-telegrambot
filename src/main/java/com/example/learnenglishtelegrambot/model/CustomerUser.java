@@ -2,6 +2,7 @@ package com.example.learnenglishtelegrambot.model;
 
 import com.example.learnenglishtelegrambot.telegram.enams.State;
 import lombok.*;
+import org.checkerframework.checker.units.qual.Temperature;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "users")
+
 public class CustomerUser {
 
     @Id
@@ -25,12 +27,13 @@ public class CustomerUser {
 
     private String name;
 
-    @OneToMany(mappedBy = "customerUser",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private List<Quiz> quizzes;
+    @ToString.Exclude
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JoinColumn(name = "quiz_id")
+    private Quiz quiz;
 
-    @Enumerated
-    @Builder.Default
-    private State botState = State.START;
+    @Temperature
+    private State botState;
 
 
 }
