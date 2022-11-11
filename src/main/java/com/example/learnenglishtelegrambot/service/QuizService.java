@@ -28,7 +28,22 @@ public class QuizService {
     }
 
 
+
+    @Transactional
+    public void deleteQuiz(CustomerUser customerUser){
+        if (customerUser.getQuiz() != null){
+            Optional<Quiz> quiz = quizRepository.findById(customerUser.getQuiz().getId());
+            customerUser.setQuiz(null);
+            quizRepository.delete(quiz.get());
+            userService.save(customerUser);
+        }
+
+    }
+
+    @Transactional
     public Quiz createQuiz(CustomerUser customerUser){
+
+
         Quiz quiz = new Quiz();
 
         Random random = new Random();
@@ -65,14 +80,12 @@ public class QuizService {
 
     @Transactional
     public Quiz getQuiz(CustomerUser customerUser) {
-        if (customerUser.getQuiz() != null){
-            Optional<Quiz> quiz = quizRepository.findById(customerUser.getQuiz().getId());
-            customerUser.setQuiz(null);
-            quizRepository.delete(quiz.get());
-            userService.save(customerUser);
 
+        if (customerUser.getQuiz() != null){
+            return quizRepository.findById(customerUser.getQuiz().getId()).get();
         }
-        return createQuiz(customerUser);
+        else return createQuiz(customerUser);
 
     }
+
 }

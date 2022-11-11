@@ -26,10 +26,6 @@ import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessag
 @RequiredArgsConstructor
 public class QuizHandler implements Handler {
 
-
-
-
-
     private static final int QUIZ_SIZE = 3;
     private static final QuizMode QUIZ_MODE = QuizMode.NORMAL;
     private final WordService wordService;
@@ -37,8 +33,6 @@ public class QuizHandler implements Handler {
     private final QuizService quizService;
     private final String START_QUIZ = "/start_quiz";
     private Word currentWord;
-
-
 
 
     @Override
@@ -60,18 +54,24 @@ public class QuizHandler implements Handler {
         return List.of(sendMessage);
     }
 
-    private List<PartialBotApiMethod<? extends Serializable>> nextWord(BotResponse botResponse, String message) {
+    public List<PartialBotApiMethod<? extends Serializable>> nextWord(BotResponse botResponse, String message) {
         CustomerUser user = botResponse.getUser();
         Quiz quiz = quizService.getQuiz(user);
         List<Long> wordIds= quiz.getWordIds();
+        if (wordIds.size() == 0){
+            return endQuiz(botResponse,message);
+        }
         Word newWord = wordService.getWord(wordIds.get(0));
         quiz.getWordIds().remove(0);
+
+
         quizService.saveQuiz(quiz);
+        user.setQuiz(quiz);
+        userService.save(user);
+        System.out.println(quiz.getWordIds());
 
         String newWordText = String.format("New ford:\n%s",newWord.getTranslation());
         botResponse.setMessage("");
-
-
 
         if (!message.equals(START_QUIZ)){
 
@@ -94,7 +94,8 @@ public class QuizHandler implements Handler {
                 "START!!!";
         CustomerUser customerUser = botResponse.getUser();
 
-        Quiz quiz = quizService.getQuiz(customerUser);
+        quizService.deleteQuiz(customerUser);
+        Quiz quiz = quizService.createQuiz(customerUser);
 
         customerUser.setBotState(State.QUIZ_HANDLER);
         userService.save(customerUser);

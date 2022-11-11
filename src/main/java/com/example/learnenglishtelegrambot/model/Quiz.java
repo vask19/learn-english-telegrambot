@@ -25,11 +25,14 @@ public class Quiz {
     private CustomerUser customerUser;
     @Builder.Default
     private int QUIZ_SIZE = 3;
+
+
     @Builder.Default
     private QuizMode QUIZ_MODE = QuizMode.NORMAL;
 
+
     @ToString.Exclude
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<Long> wordIds = new ArrayList<>();
 
 

@@ -2,7 +2,6 @@ package com.example.learnenglishtelegrambot.model;
 
 import com.example.learnenglishtelegrambot.telegram.enams.State;
 import lombok.*;
-import org.checkerframework.checker.units.qual.Temperature;
 
 import javax.persistence.*;
 import java.util.List;
@@ -32,7 +31,7 @@ public class CustomerUser {
     @JoinColumn(name = "quiz_id")
     private Quiz quiz;
 
-    @Temperature
+
     private State botState;
 
 
