@@ -1,6 +1,7 @@
 package com.example.learnenglishtelegrambot.handler;
 
 import com.example.learnenglishtelegrambot.domain.BotResponse;
+import com.example.learnenglishtelegrambot.smiles.Icon;
 import com.example.learnenglishtelegrambot.telegram.enams.State;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,12 +28,13 @@ public class StartHandler implements Handler {
         // Приветствуем пользователя
         SendMessage welcomeMessage = SendMessage.builder()
                 .text(String.format(
-                        "Hola! I'm *%s*%nI am here to help you learn some english words", botUsername
+                        "Hola! I'm *%s*%nI am here to help you learn some english words " + Icon.BLUSH.get(), botUsername
                 ))
                 .chatId(String.valueOf(botResponse.getTo()))
-
                 .build();
         welcomeMessage.enableMarkdown(true);
+
+
         return List.of(welcomeMessage);
     }
 

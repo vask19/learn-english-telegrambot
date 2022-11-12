@@ -44,6 +44,11 @@ dependencies {
 
 
 
+    //emoji
+    // https://mvnrepository.com/artifact/com.vdurmont/emoji-java
+    implementation 'com.vdurmont:emoji-java:5.1.1'
+
+
 
 
     compileOnly 'org.projectlombok:lombok:1.18.22'
