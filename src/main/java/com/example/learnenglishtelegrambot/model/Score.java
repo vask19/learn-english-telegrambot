@@ -10,6 +10,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.learnenglishtelegrambot.utils.AnswerDecorator.decor;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -44,10 +46,33 @@ public class Score {
         correctAnswers  = new ArrayList<>();
     }
 
+
+
+    private int calculateCorrectAnswers(){
+        int amount = correctAnswers.size() + incorrectAnswers.size();
+        if (amount %2 != 0){
+            amount++;
+        }
+        return 100/(amount) * correctAnswers.size();
+    }
+
     @Override
     public String toString() {
-        return "Score{" +
-                "id=" + id +
-                '}';
+        StringBuilder sb = new StringBuilder("Your result:\n");
+        int  percentResult = calculateCorrectAnswers();
+        sb.append(String.format("%s%% correct answers\n\n",decor(percentResult)));
+        sb.append("you had mistakes in next words:\n\n");
+        int count = 1;
+        for (Word word: incorrectAnswers){
+            sb.append(decor(count++ + ") " + word.getValue()));
+            sb.append(" = ");
+            sb.append(decor(word.getTranslation()));
+            sb.append("\n\n");
+
+        }
+        return sb.toString();
     }
+
+
+
 }

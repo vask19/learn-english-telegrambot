@@ -54,13 +54,14 @@ public class QuizHandler implements Handler {
     private List<PartialBotApiMethod<? extends Serializable>> endQuiz(BotResponse botResponse, String message) {
         boolean lastAnswerResult = checkAnswer(message);
         Score score = scoreService.saveScore(currentScore,botResponse.getUser());
-        System.out.println(score.getIncorrectAnswers());
-        System.out.println(score.getCorrectAnswers());
-        String text = "" +
-                "END!!!";
+        String text = score.toString();
         botResponse.setMessage(text);
-        SendMessage sendMessage = createMessageTemplate(botResponse);
-        return List.of(sendMessage);
+        SendMessage endMessage = createMessageTemplate(botResponse);
+        endMessage.setParseMode("HTML");
+        CustomerUser user = botResponse.getUser();
+        user.setBotState(State.NONE);
+        userService.save(user);
+        return List.of(endMessage);
     }
 
     public List<PartialBotApiMethod<? extends Serializable>> nextWord(BotResponse botResponse, String message) {

@@ -23,7 +23,7 @@ public class Quiz {
     @OneToOne(cascade = CascadeType.REFRESH)
     private CustomerUser customerUser;
     @Builder.Default
-    private int QUIZ_SIZE = 3;
+    private int QUIZ_SIZE = 4;
 
 
     @Builder.Default

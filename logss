@@ -4400,3 +4400,823 @@ org.hibernate.LazyInitializationException: failed to lazily initialize a collect
 2022-11-12 15:41:42.510  INFO 2143 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.975 seconds (JVM running for 2.18)
 2022-11-12 15:41:44.278  INFO 2143 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
 2022-11-12 15:41:44.325 ERROR 2143 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 15:43:45.588  INFO 2143 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 15:43:45.589  INFO 2143 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 15:43:45.600  INFO 2143 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 15:43:45.601  INFO 2143 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 15:43:45.603  INFO 2143 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 17:57:54.079  INFO 1129 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1129 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 17:57:54.081  INFO 1129 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 17:57:54.341  INFO 1129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 17:57:54.364  INFO 1129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-12 17:57:54.502  INFO 1129 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:57:54.503  INFO 1129 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:57:54.507  INFO 1129 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:57:54.509  INFO 1129 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:57:54.620  INFO 1129 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 17:57:54.624  INFO 1129 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 17:57:54.624  INFO 1129 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 17:57:54.687  INFO 1129 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 17:57:54.688  INFO 1129 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 590 ms
+2022-11-12 17:57:54.767  INFO 1129 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 17:57:54.788  INFO 1129 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 17:57:54.841  INFO 1129 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 17:57:54.871  INFO 1129 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 17:57:54.958  INFO 1129 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 17:57:54.965  INFO 1129 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 17:57:55.266  INFO 1129 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 17:57:55.269  INFO 1129 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 17:57:56.011  WARN 1129 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 17:57:56.037 DEBUG 1129 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 17:57:56.059 DEBUG 1129 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 17:57:56.068 DEBUG 1129 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 17:57:56.072 DEBUG 1129 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 17:57:56.084 ERROR 1129 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 17:57:56.144  INFO 1129 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 17:57:56.149  INFO 1129 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.208 seconds (JVM running for 2.658)
+2022-11-12 17:58:01.054  INFO 1129 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 17:58:01.131 ERROR 1129 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 17:58:32.326  INFO 1129 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 17:58:32.395 ERROR 1129 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 17:59:06.772  INFO 1129 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 17:59:06.772  INFO 1129 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 17:59:06.784  INFO 1129 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 17:59:06.786  INFO 1129 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 17:59:06.788  INFO 1129 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 17:59:09.222  INFO 1153 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1153 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 17:59:09.223  INFO 1153 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 17:59:09.466  INFO 1153 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 17:59:09.490  INFO 1153 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-11-12 17:59:09.612  INFO 1153 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:59:09.614  INFO 1153 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$62285acc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:59:09.617  INFO 1153 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:59:09.619  INFO 1153 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:59:09.705  INFO 1153 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 17:59:09.709  INFO 1153 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 17:59:09.709  INFO 1153 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 17:59:09.770  INFO 1153 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 17:59:09.771  INFO 1153 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 533 ms
+2022-11-12 17:59:09.848  INFO 1153 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 17:59:09.864  INFO 1153 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 17:59:09.911  INFO 1153 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 17:59:09.943  INFO 1153 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 17:59:10.014  INFO 1153 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 17:59:10.021  INFO 1153 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 17:59:10.318  INFO 1153 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 17:59:10.320  INFO 1153 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 17:59:10.993  WARN 1153 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 17:59:11.025 DEBUG 1153 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 17:59:11.048 DEBUG 1153 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 17:59:11.058 DEBUG 1153 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 17:59:11.063 DEBUG 1153 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 17:59:11.076 ERROR 1153 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 17:59:11.146  INFO 1153 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 17:59:11.151  INFO 1153 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.074 seconds (JVM running for 2.319)
+2022-11-12 17:59:22.604  INFO 1153 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 17:59:22.657 ERROR 1153 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 17:59:34.283  INFO 1153 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 17:59:34.283  INFO 1153 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 17:59:34.296  INFO 1153 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 17:59:34.298  INFO 1153 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 17:59:34.300  INFO 1153 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 17:59:35.661  INFO 1159 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1159 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 17:59:35.661  INFO 1159 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 17:59:35.907  INFO 1159 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 17:59:35.946  INFO 1159 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2022-11-12 17:59:36.072  INFO 1159 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:59:36.073  INFO 1159 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:59:36.076  INFO 1159 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:59:36.078  INFO 1159 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 17:59:36.164  INFO 1159 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 17:59:36.167  INFO 1159 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 17:59:36.168  INFO 1159 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 17:59:36.223  INFO 1159 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 17:59:36.223  INFO 1159 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
+2022-11-12 17:59:36.289  INFO 1159 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 17:59:36.305  INFO 1159 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 17:59:36.351  INFO 1159 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 17:59:36.379  INFO 1159 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 17:59:36.445  INFO 1159 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 17:59:36.452  INFO 1159 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 17:59:36.761  INFO 1159 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 17:59:36.764  INFO 1159 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 17:59:37.387  WARN 1159 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 17:59:37.413 DEBUG 1159 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 17:59:37.434 DEBUG 1159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 17:59:37.444 DEBUG 1159 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 17:59:37.448 DEBUG 1159 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 17:59:37.460 ERROR 1159 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 17:59:37.522  INFO 1159 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 17:59:37.526  INFO 1159 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.002 seconds (JVM running for 2.247)
+2022-11-12 17:59:39.637  INFO 1159 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 17:59:39.689 ERROR 1159 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:00:06.493  INFO 1159 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:00:06.493  INFO 1159 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:00:06.504  INFO 1159 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:00:06.506  INFO 1159 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:00:06.506  INFO 1159 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:00:08.169  INFO 1170 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1170 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:00:08.170  INFO 1170 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:00:08.415  INFO 1170 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:00:08.439  INFO 1170 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:00:08.549  INFO 1170 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:00:08.551  INFO 1170 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$62285acc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:00:08.554  INFO 1170 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:00:08.555  INFO 1170 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:00:08.640  INFO 1170 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:00:08.643  INFO 1170 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:00:08.643  INFO 1170 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:00:08.700  INFO 1170 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:00:08.700  INFO 1170 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 515 ms
+2022-11-12 18:00:08.771  INFO 1170 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:00:08.787  INFO 1170 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:00:08.837  INFO 1170 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:00:08.865  INFO 1170 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:00:08.929  INFO 1170 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:00:08.936  INFO 1170 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:00:09.233  INFO 1170 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:00:09.235  INFO 1170 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:00:09.903  WARN 1170 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:00:09.930 DEBUG 1170 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:00:09.951 DEBUG 1170 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:00:09.961 DEBUG 1170 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:00:09.965 DEBUG 1170 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:00:09.977 ERROR 1170 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:00:10.038  INFO 1170 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:00:10.043  INFO 1170 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.007 seconds (JVM running for 2.432)
+2022-11-12 18:00:12.544  INFO 1170 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:00:12.592 ERROR 1170 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:01:04.940  INFO 1170 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:01:04.940  INFO 1170 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:01:04.950  INFO 1170 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:01:04.951  INFO 1170 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:01:04.951  INFO 1170 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:01:06.536  INFO 1175 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1175 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:01:06.537  INFO 1175 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:01:06.779  INFO 1175 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:01:06.802  INFO 1175 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:01:06.915  INFO 1175 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:06.916  INFO 1175 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:06.919  INFO 1175 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:06.921  INFO 1175 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:07.009  INFO 1175 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:01:07.013  INFO 1175 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:01:07.014  INFO 1175 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:01:07.072  INFO 1175 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:01:07.072  INFO 1175 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 519 ms
+2022-11-12 18:01:07.138  INFO 1175 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:01:07.157  INFO 1175 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:01:07.204  INFO 1175 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:01:07.234  INFO 1175 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:01:07.301  INFO 1175 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:01:07.307  INFO 1175 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:01:07.627  INFO 1175 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:01:07.630  INFO 1175 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:01:08.366  WARN 1175 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:01:08.396 DEBUG 1175 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:01:08.418 DEBUG 1175 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:01:08.428 DEBUG 1175 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:01:08.432 DEBUG 1175 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:01:08.444 ERROR 1175 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:01:08.507  INFO 1175 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:01:08.512  INFO 1175 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.172 seconds (JVM running for 2.499)
+2022-11-12 18:01:13.292  INFO 1175 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:01:13.343 ERROR 1175 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:01:19.645  INFO 1175 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:01:19.645  INFO 1175 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:01:19.656  INFO 1175 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:01:19.658  INFO 1175 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:01:19.659  INFO 1175 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:01:26.317  INFO 1180 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1180 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:01:26.317  INFO 1180 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:01:26.560  INFO 1180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:01:26.583  INFO 1180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:01:26.698  INFO 1180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:26.700  INFO 1180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:26.703  INFO 1180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:26.705  INFO 1180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:26.796  INFO 1180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:01:26.800  INFO 1180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:01:26.800  INFO 1180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:01:26.855  INFO 1180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:01:26.855  INFO 1180 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 522 ms
+2022-11-12 18:01:26.923  INFO 1180 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:01:26.940  INFO 1180 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:01:26.989  INFO 1180 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:01:27.017  INFO 1180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:01:27.085  INFO 1180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:01:27.092  INFO 1180 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:01:27.447  INFO 1180 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:01:27.450  INFO 1180 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:01:28.040  WARN 1180 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:01:28.066 DEBUG 1180 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:01:28.086 DEBUG 1180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:01:28.095 DEBUG 1180 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:01:28.099 DEBUG 1180 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:01:28.110 ERROR 1180 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:01:28.170  INFO 1180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:01:28.174  INFO 1180 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.989 seconds (JVM running for 2.239)
+2022-11-12 18:01:29.236  INFO 1180 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:01:29.276 ERROR 1180 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:01:51.406  INFO 1180 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:01:51.407  INFO 1180 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:01:51.417  INFO 1180 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:01:51.418  INFO 1180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:01:51.419  INFO 1180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:01:53.272  INFO 1193 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1193 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:01:53.272  INFO 1193 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:01:53.529  INFO 1193 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:01:53.552  INFO 1193 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:01:53.660  INFO 1193 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:53.662  INFO 1193 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:53.665  INFO 1193 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:53.666  INFO 1193 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:01:53.751  INFO 1193 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:01:53.754  INFO 1193 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:01:53.755  INFO 1193 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:01:53.811  INFO 1193 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:01:53.811  INFO 1193 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 522 ms
+2022-11-12 18:01:53.880  INFO 1193 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:01:53.896  INFO 1193 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:01:53.942  INFO 1193 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:01:53.970  INFO 1193 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:01:54.041  INFO 1193 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:01:54.049  INFO 1193 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:01:54.426  INFO 1193 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:01:54.429  INFO 1193 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:01:55.058  WARN 1193 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:01:55.084 DEBUG 1193 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:01:55.106 DEBUG 1193 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:01:55.115 DEBUG 1193 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:01:55.119 DEBUG 1193 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:01:55.131 ERROR 1193 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:01:55.191  INFO 1193 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:01:55.196  INFO 1193 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.064 seconds (JVM running for 2.312)
+2022-11-12 18:01:55.383  INFO 1193 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:01:55.426 ERROR 1193 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:02:15.386  INFO 1193 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:02:15.387  INFO 1193 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:02:15.397  INFO 1193 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:02:15.398  INFO 1193 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:02:15.399  INFO 1193 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:02:17.629  INFO 1198 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1198 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:02:17.631  INFO 1198 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:02:17.870  INFO 1198 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:02:17.892  INFO 1198 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:02:18.008  INFO 1198 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:02:18.010  INFO 1198 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$62285acc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:02:18.014  INFO 1198 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:02:18.016  INFO 1198 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:02:18.103  INFO 1198 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:02:18.107  INFO 1198 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:02:18.107  INFO 1198 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:02:18.162  INFO 1198 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:02:18.163  INFO 1198 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 515 ms
+2022-11-12 18:02:18.235  INFO 1198 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:02:18.255  INFO 1198 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:02:18.301  INFO 1198 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:02:18.329  INFO 1198 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:02:18.400  INFO 1198 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:02:18.406  INFO 1198 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:02:18.661  INFO 1198 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:02:18.664  INFO 1198 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:02:19.283  WARN 1198 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:02:19.308 DEBUG 1198 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:02:19.329 DEBUG 1198 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:02:19.339 DEBUG 1198 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:02:19.343 DEBUG 1198 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:02:19.355 ERROR 1198 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:02:19.414  INFO 1198 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:02:19.419  INFO 1198 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.919 seconds (JVM running for 2.341)
+2022-11-12 18:02:25.777  WARN 1198 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2022-11-12 18:02:27.932  WARN 1198 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2022-11-12 18:02:36.629  WARN 1198 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2022-11-12 18:02:41.563  WARN 1198 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2022-11-12 18:02:45.841  WARN 1198 --- [learn_english_words_tg_bot Telegram Executor] c.g.cloud.translate.TranslateOptions     : Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2022-11-12 18:02:53.176  INFO 1198 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:02:53.305 ERROR 1198 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:03:28.094  INFO 1198 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:03:28.172 ERROR 1198 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:04:44.609  INFO 1198 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:04:44.610  INFO 1198 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:04:44.624  INFO 1198 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:04:44.626  INFO 1198 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:04:44.626  INFO 1198 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:04:46.574  INFO 1210 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1210 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:04:46.575  INFO 1210 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:04:46.809  INFO 1210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:04:46.832  INFO 1210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:04:46.939  INFO 1210 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:04:46.940  INFO 1210 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:04:46.943  INFO 1210 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:04:46.945  INFO 1210 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:04:47.035  INFO 1210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:04:47.038  INFO 1210 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:04:47.039  INFO 1210 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:04:47.095  INFO 1210 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:04:47.095  INFO 1210 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 505 ms
+2022-11-12 18:04:47.163  INFO 1210 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:04:47.179  INFO 1210 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:04:47.222  INFO 1210 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:04:47.249  INFO 1210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:04:47.318  INFO 1210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:04:47.325  INFO 1210 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:04:47.620  INFO 1210 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:04:47.623  INFO 1210 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:04:48.296  WARN 1210 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:04:48.322 DEBUG 1210 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:04:48.343 DEBUG 1210 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:04:48.353 DEBUG 1210 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:04:48.358 DEBUG 1210 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:04:48.370 ERROR 1210 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:04:48.431  INFO 1210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:04:48.436  INFO 1210 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.008 seconds (JVM running for 2.501)
+2022-11-12 18:04:55.560 ERROR 1210 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getFrom()" because the return value of "org.telegram.telegrambots.meta.api.objects.Update.getMessage()" is null
+
+java.lang.NullPointerException: Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getFrom()" because the return value of "org.telegram.telegrambots.meta.api.objects.Update.getMessage()" is null
+	at com.example.learnenglishtelegrambot.handler.UpdateReceiver.createBotResponse(UpdateReceiver.java:34) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.UpdateReceiver.handle(UpdateReceiver.java:42) ~[main/:na]
+	at com.example.learnenglishtelegrambot.telegram.LearnEnglishBot.onUpdateReceived(LearnEnglishBot.java:46) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
+
+2022-11-12 18:04:59.946  INFO 1210 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:04:59.996 ERROR 1210 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:07:10.058  INFO 1210 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:07:10.058  INFO 1210 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:07:10.069  INFO 1210 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:07:10.070  INFO 1210 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:07:10.071  INFO 1210 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:07:12.057  INFO 1227 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1227 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:07:12.057  INFO 1227 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:07:12.300  INFO 1227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:07:12.322  INFO 1227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:07:12.432  INFO 1227 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:07:12.433  INFO 1227 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:07:12.436  INFO 1227 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:07:12.438  INFO 1227 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:07:12.525  INFO 1227 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:07:12.529  INFO 1227 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:07:12.529  INFO 1227 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:07:12.585  INFO 1227 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:07:12.585  INFO 1227 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 512 ms
+2022-11-12 18:07:12.659  INFO 1227 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:07:12.676  INFO 1227 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:07:12.719  INFO 1227 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:07:12.746  INFO 1227 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:07:12.812  INFO 1227 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:07:12.819  INFO 1227 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:07:13.119  INFO 1227 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:07:13.122  INFO 1227 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:07:13.845  WARN 1227 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:07:13.872 DEBUG 1227 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:07:13.901 DEBUG 1227 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:07:13.910 DEBUG 1227 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:07:13.915 DEBUG 1227 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:07:13.927 ERROR 1227 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:07:13.988  INFO 1227 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:07:13.993  INFO 1227 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.064 seconds (JVM running for 2.427)
+2022-11-12 18:07:15.055  INFO 1227 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:07:15.103 ERROR 1227 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:09:50.438  INFO 1227 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:09:50.438  INFO 1227 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:09:50.451  INFO 1227 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:09:50.453  INFO 1227 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:09:50.454  INFO 1227 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:09:52.164  INFO 1237 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1237 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:09:52.165  INFO 1237 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:09:52.385  INFO 1237 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:09:52.406  INFO 1237 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:09:52.508  INFO 1237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:09:52.509  INFO 1237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:09:52.512  INFO 1237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:09:52.514  INFO 1237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:09:52.589  INFO 1237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:09:52.593  INFO 1237 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:09:52.593  INFO 1237 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:09:52.647  INFO 1237 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:09:52.648  INFO 1237 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 467 ms
+2022-11-12 18:09:52.710  INFO 1237 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:09:52.723  INFO 1237 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:09:52.765  INFO 1237 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:09:52.788  INFO 1237 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:09:52.851  INFO 1237 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:09:52.857  INFO 1237 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:09:53.145  INFO 1237 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:09:53.148  INFO 1237 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:09:53.791  WARN 1237 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:09:53.816 DEBUG 1237 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:09:53.836 DEBUG 1237 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:09:53.845 DEBUG 1237 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:09:53.849 DEBUG 1237 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:09:53.860 ERROR 1237 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:09:53.918  INFO 1237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:09:53.923  INFO 1237 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.88 seconds (JVM running for 2.279)
+2022-11-12 18:09:56.309  INFO 1237 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:09:56.358 ERROR 1237 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:10:01.908 ERROR 1237 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Conversion = c, Flags =  
+
+java.util.FormatFlagsConversionMismatchException: Conversion = c, Flags =  
+	at java.base/java.util.Formatter$FormatSpecifier.failMismatch(Formatter.java:4438) ~[na:na]
+	at java.base/java.util.Formatter$FormatSpecifier.checkBadFlags(Formatter.java:3176) ~[na:na]
+	at java.base/java.util.Formatter$FormatSpecifier.checkCharacter(Formatter.java:3153) ~[na:na]
+	at java.base/java.util.Formatter$FormatSpecifier.<init>(Formatter.java:2898) ~[na:na]
+	at java.base/java.util.Formatter.parse(Formatter.java:2747) ~[na:na]
+	at java.base/java.util.Formatter.format(Formatter.java:2671) ~[na:na]
+	at java.base/java.util.Formatter.format(Formatter.java:2625) ~[na:na]
+	at java.base/java.lang.String.format(String.java:4140) ~[na:na]
+	at com.example.learnenglishtelegrambot.model.Score.toString(Score.java:61) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.QuizHandler.endQuiz(QuizHandler.java:57) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.QuizHandler.nextWord(QuizHandler.java:68) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.QuizHandler.handle(QuizHandler.java:49) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.UpdateReceiver.handle(UpdateReceiver.java:61) ~[main/:na]
+	at com.example.learnenglishtelegrambot.telegram.LearnEnglishBot.onUpdateReceived(LearnEnglishBot.java:46) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
+
+2022-11-12 18:11:54.420  INFO 1237 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:11:54.420  INFO 1237 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:11:54.432  INFO 1237 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:11:54.433  INFO 1237 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:11:54.434  INFO 1237 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:11:56.373  INFO 1292 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1292 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:11:56.374  INFO 1292 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:11:56.608  INFO 1292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:11:56.630  INFO 1292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:11:56.737  INFO 1292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:11:56.739  INFO 1292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$62285acc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:11:56.742  INFO 1292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:11:56.744  INFO 1292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:11:56.829  INFO 1292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:11:56.832  INFO 1292 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:11:56.832  INFO 1292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:11:56.887  INFO 1292 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:11:56.887  INFO 1292 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 497 ms
+2022-11-12 18:11:56.958  INFO 1292 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:11:56.973  INFO 1292 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:11:57.015  INFO 1292 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:11:57.042  INFO 1292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:11:57.107  INFO 1292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:11:57.114  INFO 1292 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:11:57.406  INFO 1292 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:11:57.409  INFO 1292 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:11:58.182  WARN 1292 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:11:58.210 DEBUG 1292 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:11:58.239 DEBUG 1292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:11:58.248 DEBUG 1292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:11:58.252 DEBUG 1292 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:11:58.265 ERROR 1292 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:11:58.325  INFO 1292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:11:58.330  INFO 1292 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.081 seconds (JVM running for 2.465)
+2022-11-12 18:11:58.460 ERROR 1292 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "com.example.learnenglishtelegrambot.model.Word.getValue()" because "this.currentWord" is null
+
+java.lang.NullPointerException: Cannot invoke "com.example.learnenglishtelegrambot.model.Word.getValue()" because "this.currentWord" is null
+	at com.example.learnenglishtelegrambot.handler.QuizHandler.checkAnswer(QuizHandler.java:117) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.QuizHandler.endQuiz(QuizHandler.java:55) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.QuizHandler.nextWord(QuizHandler.java:68) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.QuizHandler.handle(QuizHandler.java:49) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.UpdateReceiver.handle(UpdateReceiver.java:61) ~[main/:na]
+	at com.example.learnenglishtelegrambot.telegram.LearnEnglishBot.onUpdateReceived(LearnEnglishBot.java:46) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
+
+2022-11-12 18:12:02.078  INFO 1292 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:12:02.158 ERROR 1292 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:12:30.078  INFO 1292 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:12:30.078  INFO 1292 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:12:30.090  INFO 1292 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:12:30.091  INFO 1292 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:12:30.092  INFO 1292 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:12:31.687  INFO 1306 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1306 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:12:31.688  INFO 1306 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:12:31.923  INFO 1306 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:12:31.945  INFO 1306 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:12:32.054  INFO 1306 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:12:32.055  INFO 1306 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:12:32.058  INFO 1306 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:12:32.060  INFO 1306 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:12:32.143  INFO 1306 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:12:32.146  INFO 1306 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:12:32.146  INFO 1306 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:12:32.200  INFO 1306 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:12:32.201  INFO 1306 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 496 ms
+2022-11-12 18:12:32.273  INFO 1306 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:12:32.287  INFO 1306 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:12:32.330  INFO 1306 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:12:32.357  INFO 1306 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:12:32.423  INFO 1306 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:12:32.429  INFO 1306 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:12:32.715  INFO 1306 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:12:32.718  INFO 1306 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:12:33.386  WARN 1306 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:12:33.412 DEBUG 1306 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:12:33.434 DEBUG 1306 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:12:33.443 DEBUG 1306 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:12:33.448 DEBUG 1306 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:12:33.460 ERROR 1306 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:12:33.521  INFO 1306 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:12:33.526  INFO 1306 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.973 seconds (JVM running for 2.183)
+2022-11-12 18:12:35.585  INFO 1306 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:12:35.630 ERROR 1306 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:13:19.808  INFO 1306 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:13:19.808  INFO 1306 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:13:19.822  INFO 1306 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:13:19.824  INFO 1306 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:13:19.825  INFO 1306 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:13:21.445  INFO 1312 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1312 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:13:21.446  INFO 1312 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:13:21.666  INFO 1312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:13:21.689  INFO 1312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:13:21.794  INFO 1312 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:13:21.795  INFO 1312 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:13:21.798  INFO 1312 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:13:21.800  INFO 1312 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:13:21.877  INFO 1312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:13:21.881  INFO 1312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:13:21.881  INFO 1312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:13:21.935  INFO 1312 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:13:21.936  INFO 1312 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 476 ms
+2022-11-12 18:13:22.011  INFO 1312 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:13:22.025  INFO 1312 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:13:22.066  INFO 1312 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:13:22.094  INFO 1312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:13:22.163  INFO 1312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:13:22.169  INFO 1312 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:13:22.450  INFO 1312 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:13:22.453  INFO 1312 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:13:23.076  WARN 1312 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:13:23.102 DEBUG 1312 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:13:23.122 DEBUG 1312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:13:23.131 DEBUG 1312 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:13:23.135 DEBUG 1312 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:13:23.147 ERROR 1312 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:13:23.207  INFO 1312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:13:23.212  INFO 1312 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.911 seconds (JVM running for 2.121)
+2022-11-12 18:13:26.204  INFO 1312 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:13:26.253 ERROR 1312 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:14:06.870  INFO 1312 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:14:06.870  INFO 1312 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:14:06.884  INFO 1312 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:14:06.886  INFO 1312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:14:06.887  INFO 1312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:14:08.855  INFO 1319 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1319 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:14:08.856  INFO 1319 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:14:09.097  INFO 1319 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:14:09.121  INFO 1319 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:14:09.229  INFO 1319 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:14:09.230  INFO 1319 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$62285acc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:14:09.233  INFO 1319 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:14:09.235  INFO 1319 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:14:09.321  INFO 1319 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:14:09.324  INFO 1319 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:14:09.324  INFO 1319 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:14:09.381  INFO 1319 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:14:09.381  INFO 1319 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 509 ms
+2022-11-12 18:14:09.453  INFO 1319 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:14:09.469  INFO 1319 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:14:09.514  INFO 1319 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:14:09.542  INFO 1319 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:14:09.614  INFO 1319 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:14:09.621  INFO 1319 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:14:09.913  INFO 1319 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:14:09.916  INFO 1319 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:14:10.610  WARN 1319 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:14:10.636 DEBUG 1319 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:14:10.657 DEBUG 1319 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:14:10.667 DEBUG 1319 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:14:10.671 DEBUG 1319 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:14:10.683 ERROR 1319 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:14:10.757  INFO 1319 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:14:10.762  INFO 1319 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.042 seconds (JVM running for 2.417)
+2022-11-12 18:14:16.564  INFO 1319 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:14:16.618 ERROR 1319 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:15:46.503  INFO 1319 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:15:46.503  INFO 1319 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:15:46.515  INFO 1319 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:15:46.517  INFO 1319 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:15:46.518  INFO 1319 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:15:48.249  INFO 1326 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1326 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:15:48.250  INFO 1326 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:15:48.490  INFO 1326 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:15:48.522  INFO 1326 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:15:48.635  INFO 1326 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:15:48.636  INFO 1326 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$179526b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:15:48.640  INFO 1326 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:15:48.641  INFO 1326 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:15:48.723  INFO 1326 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:15:48.727  INFO 1326 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:15:48.727  INFO 1326 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:15:48.781  INFO 1326 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:15:48.781  INFO 1326 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 514 ms
+2022-11-12 18:15:48.855  INFO 1326 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:15:48.873  INFO 1326 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:15:48.919  INFO 1326 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:15:48.946  INFO 1326 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:15:49.012  INFO 1326 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:15:49.019  INFO 1326 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:15:49.314  INFO 1326 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:15:49.317  INFO 1326 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:15:50.010  WARN 1326 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:15:50.036 DEBUG 1326 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:15:50.057 DEBUG 1326 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:15:50.067 DEBUG 1326 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:15:50.071 DEBUG 1326 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:15:50.083 ERROR 1326 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:15:50.143  INFO 1326 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:15:50.147  INFO 1326 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.032 seconds (JVM running for 2.248)
+2022-11-12 18:16:04.577  INFO 1326 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:16:04.661 ERROR 1326 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:17:01.830 ERROR 1326 --- [learn_english_words_tg_bot Telegram Executor] o.t.t.u.DefaultBotSession                : null
+
+java.lang.UnsupportedOperationException: null
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.example.learnenglishtelegrambot.handler.UpdateReceiver.getHandlerByCallBackQuery(UpdateReceiver.java:84) ~[main/:na]
+	at com.example.learnenglishtelegrambot.handler.UpdateReceiver.handle(UpdateReceiver.java:56) ~[main/:na]
+	at com.example.learnenglishtelegrambot.telegram.LearnEnglishBot.onUpdateReceived(LearnEnglishBot.java:46) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-5.3.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317) ~[telegrambots-5.3.0.jar:na]
+
+2022-11-12 18:17:22.055  INFO 1326 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:17:22.056  INFO 1326 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:17:22.068  INFO 1326 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:17:22.069  INFO 1326 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:17:22.070  INFO 1326 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:17:23.989  INFO 1347 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1347 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:17:23.990  INFO 1347 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:17:24.223  INFO 1347 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:17:24.245  INFO 1347 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:17:24.353  INFO 1347 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:17:24.354  INFO 1347 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$62285acc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:17:24.358  INFO 1347 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:17:24.360  INFO 1347 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:17:24.445  INFO 1347 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:17:24.448  INFO 1347 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:17:24.448  INFO 1347 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:17:24.505  INFO 1347 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:17:24.505  INFO 1347 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 499 ms
+2022-11-12 18:17:24.570  INFO 1347 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:17:24.585  INFO 1347 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:17:24.627  INFO 1347 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:17:24.656  INFO 1347 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:17:24.723  INFO 1347 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:17:24.730  INFO 1347 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:17:25.019  INFO 1347 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:17:25.022  INFO 1347 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:17:25.613  WARN 1347 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:17:25.639 DEBUG 1347 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:17:25.661 DEBUG 1347 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:17:25.670 DEBUG 1347 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:17:25.674 DEBUG 1347 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:17:25.686 ERROR 1347 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:17:25.746  INFO 1347 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:17:25.750  INFO 1347 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.884 seconds (JVM running for 2.261)
+2022-11-12 18:17:26.152  INFO 1347 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:17:26.197 ERROR 1347 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:20:25.953  INFO 1347 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:20:25.953  INFO 1347 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:20:25.967  INFO 1347 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:20:25.969  INFO 1347 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:20:25.970  INFO 1347 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:20:27.708  INFO 1358 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1358 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:20:27.709  INFO 1358 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:20:27.959  INFO 1358 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:20:27.984  INFO 1358 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:20:28.094  INFO 1358 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:20:28.096  INFO 1358 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$62285acc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:20:28.101  INFO 1358 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:20:28.103  INFO 1358 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:20:28.187  INFO 1358 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:20:28.190  INFO 1358 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:20:28.190  INFO 1358 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:20:28.253  INFO 1358 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:20:28.254  INFO 1358 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 528 ms
+2022-11-12 18:20:28.329  INFO 1358 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:20:28.344  INFO 1358 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:20:28.388  INFO 1358 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:20:28.414  INFO 1358 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:20:28.477  INFO 1358 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:20:28.484  INFO 1358 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:20:28.777  INFO 1358 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:20:28.780  INFO 1358 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:20:29.479  WARN 1358 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:20:29.506 DEBUG 1358 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:20:29.527 DEBUG 1358 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:20:29.536 DEBUG 1358 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:20:29.540 DEBUG 1358 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:20:29.552 ERROR 1358 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:20:29.613  INFO 1358 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:20:29.617  INFO 1358 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 2.036 seconds (JVM running for 2.405)
+2022-11-12 18:20:29.773  INFO 1358 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:20:29.822 ERROR 1358 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:20:52.912  INFO 1358 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:20:52.912  INFO 1358 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:20:52.924  INFO 1358 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:20:52.926  INFO 1358 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:20:52.927  INFO 1358 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:20:54.538  INFO 1367 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1367 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:20:54.539  INFO 1367 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:20:54.773  INFO 1367 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:20:54.798  INFO 1367 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:20:54.908  INFO 1367 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:20:54.910  INFO 1367 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$62285acc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:20:54.913  INFO 1367 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:20:54.915  INFO 1367 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:20:54.997  INFO 1367 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:20:55.000  INFO 1367 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:20:55.000  INFO 1367 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:20:55.054  INFO 1367 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:20:55.054  INFO 1367 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 500 ms
+2022-11-12 18:20:55.129  INFO 1367 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:20:55.143  INFO 1367 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:20:55.185  INFO 1367 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:20:55.215  INFO 1367 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:20:55.281  INFO 1367 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:20:55.287  INFO 1367 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:20:55.579  INFO 1367 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:20:55.581  INFO 1367 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:20:56.147  WARN 1367 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:20:56.173 DEBUG 1367 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:20:56.194 DEBUG 1367 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:20:56.203 DEBUG 1367 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:20:56.207 DEBUG 1367 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:20:56.219 ERROR 1367 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:20:56.279  INFO 1367 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:20:56.284  INFO 1367 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.877 seconds (JVM running for 2.086)
+2022-11-12 18:20:59.024  INFO 1367 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:20:59.080 ERROR 1367 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:21:38.868  INFO 1367 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:21:38.869  INFO 1367 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:21:38.880  INFO 1367 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:21:38.881  INFO 1367 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:21:38.882  INFO 1367 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:21:40.328  INFO 1373 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1373 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:21:40.329  INFO 1373 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:21:40.548  INFO 1373 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:21:40.571  INFO 1373 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:21:40.681  INFO 1373 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:21:40.682  INFO 1373 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:21:40.685  INFO 1373 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:21:40.687  INFO 1373 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:21:40.766  INFO 1373 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:21:40.769  INFO 1373 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:21:40.769  INFO 1373 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:21:40.822  INFO 1373 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:21:40.822  INFO 1373 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 478 ms
+2022-11-12 18:21:40.882  INFO 1373 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:21:40.897  INFO 1373 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:21:40.938  INFO 1373 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:21:40.963  INFO 1373 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:21:41.032  INFO 1373 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:21:41.038  INFO 1373 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:21:41.331  INFO 1373 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:21:41.334  INFO 1373 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:21:44.176  WARN 1373 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:21:44.201 DEBUG 1373 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:21:44.222 DEBUG 1373 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:21:44.231 DEBUG 1373 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:21:44.235 DEBUG 1373 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:21:44.246 ERROR 1373 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:21:44.303  INFO 1373 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:21:44.307  INFO 1373 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 4.11 seconds (JVM running for 4.307)
+2022-11-12 18:21:52.698  INFO 1373 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:21:52.749 ERROR 1373 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
+2022-11-12 18:22:54.861  INFO 1373 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : Shutting down ThreadPoolExecutor
+2022-11-12 18:22:54.861  INFO 1373 --- [SpringApplicationShutdownHook] c.g.k.t.TelegramAutoConfiguration        : ThreadPoolExecutor has been shut down
+2022-11-12 18:22:54.872  INFO 1373 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:22:54.873  INFO 1373 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-12 18:22:54.874  INFO 1373 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-12 18:22:56.658  INFO 1379 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Starting LearnEnglishTelegrambotApplication using Java 17.0.2 on MacBook-Air-Vasyl.local with PID 1379 (/Users/vasylkorol/IdeaProjects/learn-english-telegrambot/build/classes/java/main started by vasylkorol in /Users/vasylkorol/IdeaProjects/learn-english-telegrambot)
+2022-11-12 18:22:56.659  INFO 1379 --- [main] c.e.l.LearnEnglishTelegrambotApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 18:22:56.899  INFO 1379 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 18:22:56.923  INFO 1379 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-11-12 18:22:57.031  INFO 1379 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'handlerMethodContainer' of type [com.github.kshashov.telegram.handler.HandlerMethodContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:22:57.033  INFO 1379 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.github.kshashov.telegram.metrics.MetricsConfiguration' of type [com.github.kshashov.telegram.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$9529021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:22:57.036  INFO 1379 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getMetricRegistry' of type [com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:22:57.038  INFO 1379 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'metricsService' of type [com.github.kshashov.telegram.metrics.MetricsService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 18:22:57.123  INFO 1379 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 18:22:57.126  INFO 1379 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 18:22:57.126  INFO 1379 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 18:22:57.182  INFO 1379 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-12 18:22:57.182  INFO 1379 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 507 ms
+2022-11-12 18:22:57.248  INFO 1379 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 18:22:57.264  INFO 1379 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 18:22:57.309  INFO 1379 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 18:22:57.337  INFO 1379 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-12 18:22:57.406  INFO 1379 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-12 18:22:57.413  INFO 1379 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-12 18:22:57.711  INFO 1379 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 18:22:57.713  INFO 1379 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 18:22:58.299  WARN 1379 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 18:22:58.324 DEBUG 1379 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 18:22:58.344 DEBUG 1379 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 18:22:58.353 DEBUG 1379 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 18:22:58.357 DEBUG 1379 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 18:22:58.369 ERROR 1379 --- [main] c.g.k.t.TelegramAutoConfiguration        : No bot configurations found
+2022-11-12 18:22:58.431  INFO 1379 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 18:22:58.436  INFO 1379 --- [main] c.e.l.LearnEnglishTelegrambotApplication : Started LearnEnglishTelegrambotApplication in 1.902 seconds (JVM running for 2.27)
+2022-11-12 18:23:03.301  INFO 1379 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.service.QuizService                : ----[quiz] was created and saved to bd
+2022-11-12 18:23:03.347 ERROR 1379 --- [learn_english_words_tg_bot Telegram Executor] c.e.l.telegram.LearnEnglishBot           : oops
