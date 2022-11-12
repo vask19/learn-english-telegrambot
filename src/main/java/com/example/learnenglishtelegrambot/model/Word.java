@@ -1,9 +1,6 @@
 package com.example.learnenglishtelegrambot.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -20,8 +17,10 @@ public class Word {
     @Column(name = "word_id")
     private Long id;
 
+    @ToString.Exclude
     @ManyToOne(cascade = CascadeType.MERGE)
     private CustomerUser user;
+
 
 
 

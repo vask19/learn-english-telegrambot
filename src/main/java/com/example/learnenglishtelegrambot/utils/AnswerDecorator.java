@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 public class AnswerDecorator {
 
 
-    public String decor(String value){
+    public static String decor(String value){
         return "<b>" + value + "</b>";
     }
 
-    public String decor(Integer value){
+    public static String decor(Integer value){
         return "<b>" + value + "</b>";
 
     }

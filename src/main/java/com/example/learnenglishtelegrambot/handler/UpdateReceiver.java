@@ -40,7 +40,8 @@ public class UpdateReceiver {
     public List<PartialBotApiMethod<? extends Serializable>> handle(Update update) {
 
         BotResponse botResponse = createBotResponse(update);
-        final Message message = update.getMessage();
+        System.out.println(update.getMessage());
+        Message message = update.getMessage();
         User user = update.getMessage().getFrom();
         CustomerUser customUser = userService.getUser(user);
         System.out.println(customUser.getBotState());

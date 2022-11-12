@@ -8,10 +8,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessageTemplate;
 
@@ -21,6 +21,7 @@ import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessag
 @Slf4j
 public class HelpHandler implements Handler {
 
+    private static final List<String> helpAnswersText = List.of("Commands:\n","[/start_quiz] - run new quiz\n","[/new] - add new word");
     private static final String HELP_COMMAND = "/help";
     private final UserService userService;
 
@@ -29,17 +30,30 @@ public class HelpHandler implements Handler {
         // Создаем кнопку для смены имени
 
 
-        String text = "" +
-                "help h";
-        botResponse.setMessage(text);
+
+
         CustomerUser customerUser = botResponse.getUser();
         customerUser.setBotState(State.NONE);
         userService.save(customerUser);
-        SendMessage sendMessage = createMessageTemplate(botResponse);
 
 
 
-        return List.of(sendMessage);
+        return createMessages(botResponse);
+    }
+
+
+
+
+
+    private List<PartialBotApiMethod<? extends Serializable>> createMessages(BotResponse botResponse){
+       return helpAnswersText
+                .stream()
+                .map( text -> {
+                            botResponse.setMessage(text);
+                            return createMessageTemplate(botResponse);
+                        }
+                ).collect(Collectors.toList());
+
     }
 
 

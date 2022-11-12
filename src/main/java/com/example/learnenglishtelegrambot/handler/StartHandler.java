@@ -27,7 +27,7 @@ public class StartHandler implements Handler {
         // Приветствуем пользователя
         SendMessage welcomeMessage = SendMessage.builder()
                 .text(String.format(
-                        "Hola! I'm *%s*%nI am here to help you learn Java", botUsername
+                        "Hola! I'm *%s*%nI am here to help you learn some english words", botUsername
                 ))
                 .chatId(String.valueOf(botResponse.getTo()))
 

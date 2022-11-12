@@ -4,6 +4,7 @@ public enum State {
     NONE,
     START,
     QUIZ_HANDLER,
-    NEW_WORD;
-    ;
+    NEW_WORD,
+    SETTINGS
+
 }

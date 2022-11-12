@@ -20,7 +20,6 @@ public class Quiz {
     @Column(name = "quiz_id")
     private Long id;
     @ToString.Exclude
-
     @OneToOne(cascade = CascadeType.REFRESH)
     private CustomerUser customerUser;
     @Builder.Default
