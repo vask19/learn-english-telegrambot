@@ -2,6 +2,7 @@ package com.example.learnenglishtelegrambot.service;
 
 import com.example.learnenglishtelegrambot.model.CustomerUser;
 import com.example.learnenglishtelegrambot.model.Quiz;
+import com.example.learnenglishtelegrambot.model.Score;
 import com.example.learnenglishtelegrambot.model.Word;
 import com.example.learnenglishtelegrambot.repository.QuizRepository;
 import lombok.RequiredArgsConstructor;

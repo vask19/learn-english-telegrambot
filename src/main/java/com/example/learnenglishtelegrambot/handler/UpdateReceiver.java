@@ -38,13 +38,10 @@ public class UpdateReceiver {
 
     // Обрабатываем полученный Update
     public List<PartialBotApiMethod<? extends Serializable>> handle(Update update) {
-
         BotResponse botResponse = createBotResponse(update);
-        System.out.println(update.getMessage());
         Message message = update.getMessage();
         User user = update.getMessage().getFrom();
         CustomerUser customUser = userService.getUser(user);
-        System.out.println(customUser.getBotState());
         botResponse.setUser(customUser);
 
         if (customUser.getBotState() == null){
@@ -55,10 +52,12 @@ public class UpdateReceiver {
         if (update.getMessage().isCommand()){
             return getHandlerByCallBackQuery(update.getMessage().getText()).handle(botResponse,message.getText());
         }
+        return getHandlerByState(customUser.getBotState()).handle(botResponse, message.getText());
 
 
 
-                return getHandlerByState(customUser.getBotState()).handle(botResponse, message.getText());
+
+
 
 
 

@@ -1,6 +1,7 @@
 package com.example.learnenglishtelegrambot.model;
 
 
+import com.example.learnenglishtelegrambot.smiles.Icon;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -50,17 +51,18 @@ public class Score {
 
     private int calculateCorrectAnswers(){
         int amount = correctAnswers.size() + incorrectAnswers.size();
-        if (amount %2 != 0){
-            amount++;
-        }
-        return 100/(amount) * correctAnswers.size();
+        int percent =(100/amount) * correctAnswers.size();
+//        if (amount % 2 != 0){
+//            percent++;
+//        }
+        return percent;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Your result:\n");
         int  percentResult = calculateCorrectAnswers();
-        sb.append(String.format("%s%% correct answers\n\n",decor(percentResult)));
+        sb.append(String.format("%s%% correct answers %s\n\n",decor(percentResult), Icon.TROPHY.get()));
         sb.append("you had mistakes in next words:\n\n");
         int count = 1;
         for (Word word: incorrectAnswers){

@@ -41,8 +41,6 @@ public class LearnEnglishBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-
-
         List<PartialBotApiMethod<? extends Serializable>> messagesToSend = updateReceiver.handle(update);
 
         if (messagesToSend != null && !messagesToSend.isEmpty()) {

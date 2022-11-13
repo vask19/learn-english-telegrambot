@@ -9,7 +9,8 @@ public enum Icon {
     NOT(":x:"),
     DOUBT(":zzz:"),
     FLAG(":checkered_flag:"),
-    BLUSH(":blush:");
+    BLUSH(":blush:"),
+    TROPHY(":trophy:");
 
     private String value;
 

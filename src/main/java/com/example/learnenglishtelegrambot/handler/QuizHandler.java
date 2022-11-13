@@ -18,6 +18,8 @@ import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static com.example.learnenglishtelegrambot.util.TelegramUtil.createMessageTemplate;
@@ -36,8 +38,15 @@ public class QuizHandler implements Handler {
     private final QuizService quizService;
     private final ScoreService scoreService;
     private final String START_QUIZ = "/start_quiz";
-    private Word currentWord;
-    private Score currentScore;
+    private HashMap<Long,Score> scoreHashMap;
+    private HashMap<Long,Word> currentWords;
+//    private Word currentWord;
+//    private Score currentScore;
+
+    {
+        scoreHashMap = new HashMap<>();
+        currentWords = new HashMap<>();
+    }
 
 
     @Override
@@ -51,18 +60,26 @@ public class QuizHandler implements Handler {
 
     }
 
-    private List<PartialBotApiMethod<? extends Serializable>> endQuiz(BotResponse botResponse, String message) {
-        boolean lastAnswerResult = checkAnswer(message);
-        Score score = scoreService.saveScore(currentScore,botResponse.getUser());
-        String text = score.toString();
-        botResponse.setMessage(text);
-        SendMessage endMessage = createMessageTemplate(botResponse);
-        endMessage.setParseMode("HTML");
-        CustomerUser user = botResponse.getUser();
-        user.setBotState(State.NONE);
-        userService.save(user);
-        return List.of(endMessage);
+
+
+    private List<PartialBotApiMethod<? extends Serializable>> startQuiz(BotResponse botResponse, String message) {
+        CustomerUser customerUser = botResponse.getUser();
+        Score currentScore = new Score();
+        currentScore.initWordLists();
+        scoreHashMap.put(customerUser.getId(),currentScore);
+
+        quizService.deleteQuiz(customerUser);
+        Quiz quiz = quizService.createQuiz(customerUser);
+
+        customerUser.setBotState(State.QUIZ_HANDLER);
+        userService.save(customerUser);
+
+        return nextWord(botResponse,START_QUIZ);
+
     }
+
+
+
 
     public List<PartialBotApiMethod<? extends Serializable>> nextWord(BotResponse botResponse, String message) {
         CustomerUser user = botResponse.getUser();
@@ -80,33 +97,65 @@ public class QuizHandler implements Handler {
 
 
 
-        return createAnswerToUser(newWord,botResponse,message);
+        return wordProcessing(newWord,botResponse,message);
     }
 
 
 
-    private List<PartialBotApiMethod<? extends Serializable>> createAnswerToUser(Word newWord, BotResponse botResponse, String  message){
-        String newWordText = String.format("New word:\n%s",decor(newWord.getTranslation()));
+    private List<PartialBotApiMethod<? extends Serializable>> wordProcessing(Word newWord, BotResponse botResponse, String  message){
+        SendMessage firstMessage = null;
+        SendMessage secondMessage = null;
         botResponse.setMessage("");
-
-        //if message isn't a start message - create message which users answer result
         if (!message.equals(START_QUIZ)){
-            boolean answerResult = checkAnswer(message);
-            String resultText = createResultMessage(message,currentWord.getValue(),answerResult);
-            botResponse.setMessage(resultText);
+            boolean answerResult = checkAnswer(message,botResponse.getUser().getId());
+            secondMessage = createSendMessageForCurrentWord(newWord,botResponse,message,answerResult);
+
+        }
+        currentWords.put(botResponse.getUser().getId(),newWord);
+
+        firstMessage = createSendMessageForNewWord(newWord,botResponse);
+
+        List<PartialBotApiMethod<? extends Serializable>> answerList = new ArrayList<>();
+        if (firstMessage != null){
+            answerList.add(firstMessage);
+
+        }
+        if (secondMessage != null){
+            answerList.add(secondMessage);
         }
 
-        SendMessage checkWordMessage = createMessageTemplate(botResponse);
-        checkWordMessage.setParseMode("HTML");
+        return answerList;
 
-        currentWord = newWord;
 
+
+    }
+
+
+    private SendMessage createSendMessageForNewWord(Word newWord,BotResponse botResponse){
+        String newWordText = String.format("New word:\n%s",decor(newWord.getTranslation()));
         botResponse.setMessage(newWordText);
         SendMessage newWordMessage = createMessageTemplate(botResponse);
         newWordMessage.setParseMode("HTML");
-        return List.of(checkWordMessage,newWordMessage);
+        return newWordMessage;
 
     }
+
+    private SendMessage createSendMessageForCurrentWord(Word newWord, BotResponse botResponse, String  message,boolean answerResult){
+        Word currentWord = currentWords.get(botResponse.getUser().getId());
+        String resultText = createResultMessage(message,currentWord.getValue(),answerResult);
+        botResponse.setMessage(resultText);
+        SendMessage sendMessage = createMessageTemplate(botResponse);
+        sendMessage.setParseMode("HTML");
+
+
+        return  sendMessage;
+
+
+    }
+
+
+
+
 
     private String createResultMessage(String first, String second,boolean result){
         StringBuilder sb = new StringBuilder("Your answer ");
@@ -117,7 +166,9 @@ public class QuizHandler implements Handler {
         return sb.toString();
     }
 
-    private boolean checkAnswer(String  guessWord){
+    private boolean checkAnswer(String  guessWord,Long userId){
+        Word currentWord = currentWords.get(userId);
+        Score currentScore = scoreHashMap.get(userId);
         if (guessWord.equals(currentWord.getValue())){
             currentScore.getCorrectAnswers().add(currentWord);
             return true;
@@ -129,26 +180,34 @@ public class QuizHandler implements Handler {
 
 
 
-    private List<PartialBotApiMethod<? extends Serializable>> startQuiz(BotResponse botResponse, String message) {
-        String text = "" +
-                "START!!!";
 
-        CustomerUser customerUser = botResponse.getUser();
-        currentScore = new Score();
-        currentScore.initWordLists();
 
-        quizService.deleteQuiz(customerUser);
-        Quiz quiz = quizService.createQuiz(customerUser);
 
-        customerUser.setBotState(State.QUIZ_HANDLER);
-        userService.save(customerUser);
 
-        return nextWord(botResponse,"/start_quiz");
-//
-//        botResponse.setMessage(text);
-//        SendMessage sendMessage = createMessageTemplate(botResponse);
-//        return List.of(sendMessage);
+
+    private List<PartialBotApiMethod<? extends Serializable>> endQuiz(BotResponse botResponse, String message) {
+        Long userId = botResponse.getUser().getId();
+        boolean lastAnswerResult = checkAnswer(message,userId);
+        Score currentScore = scoreHashMap.get(userId);
+
+        Score score = scoreService.saveScore(currentScore,botResponse.getUser());
+        String text = score.toString();
+        botResponse.setMessage(text);
+        SendMessage endMessage = createMessageTemplate(botResponse);
+        endMessage.setParseMode("HTML");
+        CustomerUser user = botResponse.getUser();
+        user.setBotState(State.NONE);
+        userService.save(user);
+        return List.of(endMessage);
     }
+
+
+
+
+
+
+
+
 
 
     @Override
